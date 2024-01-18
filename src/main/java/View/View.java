@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
 import java.awt.GridLayout;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -67,6 +68,24 @@ String[] arregloUnidimensional = {
         return tablero;
     }
 
+    public JLabel getLabelPuntos() {
+        return labelPuntos;
+    }
+
+    public JLabel getLabelTiempo() {
+        return labelTiempo;
+    }
+
+    public JLabel getPuntos() {
+        return puntos;
+    }
+
+    public JLabel getTiempo() {
+        return tiempo;
+    }
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -482,6 +501,11 @@ String[] arregloUnidimensional = {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        panelTP = new javax.swing.JPanel();
+        labelPuntos = new javax.swing.JLabel();
+        puntos = new javax.swing.JLabel();
+        labelTiempo = new javax.swing.JLabel();
+        tiempo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -928,18 +952,62 @@ String[] arregloUnidimensional = {
 
         jTabbedPane1.addTab("Palabras Verticales", jPanel3);
 
+        panelTP.setBackground(new java.awt.Color(255, 255, 255));
+
+        labelPuntos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        labelPuntos.setText("Puntos:");
+
+        puntos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        puntos.setText("0");
+
+        labelTiempo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        labelTiempo.setText("Tiempo restante:");
+
+        tiempo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        tiempo.setText("0");
+
+        javax.swing.GroupLayout panelTPLayout = new javax.swing.GroupLayout(panelTP);
+        panelTP.setLayout(panelTPLayout);
+        panelTPLayout.setHorizontalGroup(
+            panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTPLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelPuntos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(puntos)
+                .addGap(18, 18, 18)
+                .addComponent(labelTiempo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tiempo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelTPLayout.setVerticalGroup(
+            panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTPLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelPuntos)
+                    .addComponent(puntos)
+                    .addGroup(panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelTiempo)
+                        .addComponent(tiempo)))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tablero, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(icon)
                         .addGap(18, 18, 18)
-                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(tablero, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panelTP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(37, 37, 37)
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
@@ -957,7 +1025,9 @@ String[] arregloUnidimensional = {
                             .addComponent(icon)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(8, 8, 8)
-                                .addComponent(title)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(panelTP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(title))))
                         .addGap(18, 18, 18)
                         .addComponent(tablero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -1405,7 +1475,12 @@ String[] arregloUnidimensional = {
     private javax.swing.JTextField jTextField97;
     private javax.swing.JTextField jTextField98;
     private javax.swing.JTextField jTextField99;
+    private javax.swing.JLabel labelPuntos;
+    private javax.swing.JLabel labelTiempo;
+    private javax.swing.JPanel panelTP;
+    private javax.swing.JLabel puntos;
     private javax.swing.JPanel tablero;
+    private javax.swing.JLabel tiempo;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

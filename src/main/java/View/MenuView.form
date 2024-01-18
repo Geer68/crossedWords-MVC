@@ -32,41 +32,49 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="icon" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="title" min="-2" pref="363" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="tablero" min="-2" pref="666" max="-2" attributes="0"/>
+                  <Component id="jPanel1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-              <Component id="jTabbedPane1" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace pref="15" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="startGame" min="-2" pref="186" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="puntajes" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="198" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jTabbedPane1" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="icon" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                              <Component id="title" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="tablero" max="32767" attributes="0"/>
+                  <Component id="icon" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="title" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="startGame" min="-2" pref="54" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="puntajes" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="63" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -77,889 +85,120 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="36" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Cross Words ;)"/>
+        <Property name="text" type="java.lang.String" value="Crossed Words ;)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="icon">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\resources\images\crossword64x64.png"/>
+          <Image iconType="2" name="C:\Users\germh\Documents\NetBeansProjects\FinalHidalgo\src\main\resources\images\crossword128x128.png"/>
         </Property>
       </Properties>
     </Component>
-    <Container class="javax.swing.JPanel" name="tablero">
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
-        <Property name="columns" type="int" value="20"/>
-        <Property name="rows" type="int" value="20"/>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JTextField" name="jTextField0">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField4">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField5">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField6">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField7">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField8">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField9">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField10">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField11">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField12">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField13">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField14">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField15">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField16">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField17">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField18">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField19">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField20">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField21">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField22">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField23">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField24">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField25">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField26">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField27">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField28">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField29">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField30">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField31">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField32">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField33">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField34">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField35">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField36">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField37">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField38">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField39">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField40">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField41">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField42">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField43">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField44">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField45">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField46">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField47">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField48">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField49">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField50">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField51">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField52">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField53">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField54">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField55">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField56">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField57">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField58">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField59">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField60">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField61">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField62">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField63">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField64">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField65">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField66">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField67">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField68">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField69">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField70">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField71">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField72">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField73">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField74">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField75">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField76">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField77">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField78">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField79">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField80">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField81">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField82">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField83">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField84">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField85">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField86">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField87">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField88">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField89">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField90">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField91">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField92">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField93">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField94">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField95">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField96">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField97">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField98">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField99">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField100">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField101">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField102">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField103">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField104">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField105">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField106">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField107">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField108">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField109">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField110">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField111">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField112">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField113">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField114">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField115">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField116">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField117">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField118">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField119">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField120">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField121">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField122">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField123">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField124">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField125">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField126">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField127">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField128">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField129">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField130">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField131">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField132">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField133">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField134">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField135">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField136">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField137">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField138">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField139">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField140">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField141">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField142">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField143">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField144">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField145">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField146">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField147">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField148">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField149">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField150">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField151">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField152">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField153">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField154">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField155">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField156">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField157">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField158">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField159">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField160">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField161">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField162">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField163">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField164">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField165">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField166">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField167">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField168">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField169">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField170">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField171">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField172">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField173">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField174">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField175">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField176">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField177">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField178">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField179">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField180">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField181">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField182">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField183">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField184">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField185">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField186">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField187">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField188">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField189">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField190">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField191">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField192">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField193">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField194">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField195">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField196">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField197">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField198">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField199">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField200">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField201">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField202">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField203">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField204">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField205">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField206">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField207">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField208">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField209">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField210">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField211">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField212">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField213">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField214">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField215">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField216">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField217">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField218">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField219">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField220">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField221">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField222">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField223">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField224">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField225">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField226">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField227">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField228">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField229">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField230">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField231">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField232">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField233">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField234">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField235">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField236">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField237">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField238">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField239">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField240">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField241">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField242">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField243">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField244">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField245">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField246">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField247">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField248">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField249">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField250">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField251">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField252">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField253">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField254">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField255">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField256">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField257">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField258">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField259">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField260">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField261">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField262">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField263">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField264">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField265">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField266">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField267">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField268">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField269">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField270">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField271">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField272">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField273">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField274">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField275">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField276">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField277">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField278">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField279">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField280">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField281">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField282">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField283">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField284">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField285">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField286">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField287">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField288">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField289">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField290">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField291">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField292">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField293">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField294">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField295">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField296">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField297">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField298">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField299">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField300">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField301">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField302">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField303">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField304">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField305">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField306">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField307">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField308">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField309">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField310">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField311">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField312">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField313">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField314">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField315">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField316">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField317">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField318">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField319">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField320">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField321">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField322">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField323">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField324">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField325">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField326">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField327">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField328">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField329">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField330">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField331">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField332">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField333">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField334">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField335">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField336">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField337">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField338">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField339">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField340">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField341">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField342">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField343">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField344">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField345">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField346">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField347">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField348">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField349">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField350">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField351">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField352">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField353">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField354">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField355">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField356">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField357">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField358">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField359">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField360">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField361">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField362">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField363">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField364">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField365">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField366">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField367">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField368">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField369">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField370">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField371">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField372">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField373">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField374">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField375">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField376">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField377">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField378">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField379">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField380">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField381">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField382">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField383">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField384">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField385">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField386">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField387">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField388">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField389">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField390">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField391">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField392">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField393">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField394">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField395">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField396">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField397">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField398">
-        </Component>
-        <Component class="javax.swing.JTextField" name="jTextField399">
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+    <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
       </Properties>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="checkFacil" min="-2" pref="85" max="-2" attributes="0"/>
+                      <Component id="checkDificil" min="-2" pref="85" max="-2" attributes="0"/>
+                      <Component id="title1" min="-2" pref="421" max="-2" attributes="0"/>
+                      <Component id="checkIntermedio" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                  <Component id="title1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="checkFacil" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="checkIntermedio" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="checkDificil" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Component class="javax.swing.JLabel" name="title1">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="24" style="1"/>
             </Property>
+            <Property name="text" type="java.lang.String" value="Selecion&#xe1; la dificultad para empezar"/>
           </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Palabras Horizontales">
-                <Property name="tabTitle" type="java.lang.String" value="Palabras Horizontales"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="436" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="555" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel3">
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="checkDificil">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
             </Property>
+            <Property name="text" type="java.lang.String" value="Dificil"/>
           </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Palabras Verticales">
-                <Property name="tabTitle" type="java.lang.String" value="Palabras Verticales"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="436" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="555" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-        </Container>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="checkFacil">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Facil"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="checkIntermedio">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Intermedio"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="startGame">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="9d" green="75" red="fa" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Jugar"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
+        <Property name="borderPainted" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="puntajes">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="f7" green="c9" red="6c" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="18" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Ver puntajes"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

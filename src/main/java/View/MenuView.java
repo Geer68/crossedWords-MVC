@@ -1,72 +1,34 @@
 package View;
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.GridLayout;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
 
 public class MenuView extends javax.swing.JFrame {
-String[] arregloUnidimensional = {
-    "J", "0", "M", "0", "0", "0", "0", "D", "0", "0", "0", "0", "0", "0", "U", "R", "L", "0", "0",
-    "S", "L", "O", "T", "0", "B", "U", "S", "0", "0", "S", "0", "0", "0", "0", "0", "E", "0", "D",
-    "0", "0", "U", "0", "P", "Y", "0", "0", "0", "M", "O", "U", "S", "E", "P", "A", "D", "0", "A", "0",
-    "0", "0", "S", "0", "0", "T", "0", "0", "0", "0", "F", "0", "0", "0", "0", "C", "0", "0", "T", "0",
-    "F", "U", "E", "N", "T", "E", "0", "C", "0", "0", "T", "0", "0", "L", "0", "C", "D", "R", "O", "M",
-    "D", "0", "0", "0", "0", "0", "H", "A", "R", "D", "W", "A", "R", "E", "0", "E", "0", "0", "S", "0",
-    "P", "0", "0", "0", "0", "0", "0", "R", "0", "0", "A", "0", "0", "C", "0", "S", "0", "M", "0", "0",
-    "0", "0", "0", "P", "0", "0", "R", "0", "0", "T", "0", "S", "0", "E", "0", "0", "R", "0", "B", "O",
-    "T", "O", "N", "E", "S", "S", "E", "0", "0", "O", "0", "0", "0", "M", "0", "0", "E", "0", "A", "0",
-    "0", "0", "0", "T", "0", "0", "0", "S", "E", "R", "V", "I", "D", "O", "R", "0", "L", "0", "R", "0",
-    "0", "0", "0", "A", "0", "0", "I", "C", "#", "C", "0", "0", "0", "R", "0", "0", "A", "0", "R", "A",
-    "M", "0", "0", "0", "T", "E", "C", "L", "A", "D", "O", "0", "B", "I", "T", "0", "C", "0", "A", "0",
-    "O", "0", "0", "0", "0", "0", "O", "0", "R", "0", "0", "0", "0", "A", "0", "0", "I", "0", "0", "0",
-    "N", "0", "0", "W", "0", "0", "N", "0", "C", "0", "0", "0", "0", "0", "0", "0", "B", "O", "0", "0",
-    "O", "0", "0", "I", "0", "0", "I", "0", "0", "O", "0", "H", "0", "0", "0", "W", "O", "R", "D", "N",
-    "0", "I", "N", "T", "E", "R", "N", "E", "T", "0", "D", "I", "S", "C", "O", "0", "0", "O", "0", "0",
-    "0", "0", "O", "0", "0", "D", "0", "0", "0", "0", "V", "0", "0", "0", "0", "0", "O", "0", "0", "I",
-    "M", "P", "R", "E", "S", "O", "R", "A", "0", "M", "O", "D", "E", "M", "0", "0", "T", "0", "0", "0",
-    "0", "0", "0", "W", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "M", "A", "C",
-    "O", "S", "0", "M", "I", "C", "R", "O", "S", "O", "F", "T", "0", "0"
-};
+
     public MenuView() {
         initComponents();
-//        Component[] components = tablero.getComponents();
-//        int contador = 0;
-//        for (Component component : components) {
-//            if (component instanceof JTextField) {
-//                JTextField textField = (JTextField) component;
-//                textField.setText(arregloUnidimensional[contador]);
-//                textField.setHorizontalAlignment(JTextField.CENTER);
-//                textField.setFont(new Font("Seoge UI", Font.BOLD, 12));
-//                if(textField.getText().equals("0")){
-//                    setForeground(Color.BLACK);
-//                }
-//                contador++;
-//            }
-//        }
     }
 
-//    public void fillTablero(JTextField[][] matriz) {
-//        System.out.println("");
-//        JPanel panel = new JPanel(new GridLayout(20, 20));
-//        for (JTextField[] fila : matriz) {
-//            for (JTextField casillero : fila) {
-//                casillero.setHorizontalAlignment(JTextField.CENTER);
-//                panel.add(casillero);
-//            }
-//        }
-//        getContentPane().add(panel);
-//        pack();
-//        setLocationRelativeTo(null);
-//        setVisible(true);
-//    }
-
-    public JPanel getTablero() {
-        return tablero;
+    public JCheckBox getCheckDificil() {
+        return checkDificil;
     }
 
+    public JCheckBox getCheckFacil() {
+        return checkFacil;
+    }
+
+    public JCheckBox getCheckIntermedio() {
+        return checkIntermedio;
+    }
+
+    public JButton getPuntajes() {
+        return puntajes;
+    }
+
+    public JButton getStartGame() {
+        return startGame;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -78,410 +40,13 @@ String[] arregloUnidimensional = {
 
         title = new javax.swing.JLabel();
         icon = new javax.swing.JLabel();
-        tablero = new javax.swing.JPanel();
-        jTextField0 = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
-        jTextField19 = new javax.swing.JTextField();
-        jTextField20 = new javax.swing.JTextField();
-        jTextField21 = new javax.swing.JTextField();
-        jTextField22 = new javax.swing.JTextField();
-        jTextField23 = new javax.swing.JTextField();
-        jTextField24 = new javax.swing.JTextField();
-        jTextField25 = new javax.swing.JTextField();
-        jTextField26 = new javax.swing.JTextField();
-        jTextField27 = new javax.swing.JTextField();
-        jTextField28 = new javax.swing.JTextField();
-        jTextField29 = new javax.swing.JTextField();
-        jTextField30 = new javax.swing.JTextField();
-        jTextField31 = new javax.swing.JTextField();
-        jTextField32 = new javax.swing.JTextField();
-        jTextField33 = new javax.swing.JTextField();
-        jTextField34 = new javax.swing.JTextField();
-        jTextField35 = new javax.swing.JTextField();
-        jTextField36 = new javax.swing.JTextField();
-        jTextField37 = new javax.swing.JTextField();
-        jTextField38 = new javax.swing.JTextField();
-        jTextField39 = new javax.swing.JTextField();
-        jTextField40 = new javax.swing.JTextField();
-        jTextField41 = new javax.swing.JTextField();
-        jTextField42 = new javax.swing.JTextField();
-        jTextField43 = new javax.swing.JTextField();
-        jTextField44 = new javax.swing.JTextField();
-        jTextField45 = new javax.swing.JTextField();
-        jTextField46 = new javax.swing.JTextField();
-        jTextField47 = new javax.swing.JTextField();
-        jTextField48 = new javax.swing.JTextField();
-        jTextField49 = new javax.swing.JTextField();
-        jTextField50 = new javax.swing.JTextField();
-        jTextField51 = new javax.swing.JTextField();
-        jTextField52 = new javax.swing.JTextField();
-        jTextField53 = new javax.swing.JTextField();
-        jTextField54 = new javax.swing.JTextField();
-        jTextField55 = new javax.swing.JTextField();
-        jTextField56 = new javax.swing.JTextField();
-        jTextField57 = new javax.swing.JTextField();
-        jTextField58 = new javax.swing.JTextField();
-        jTextField59 = new javax.swing.JTextField();
-        jTextField60 = new javax.swing.JTextField();
-        jTextField61 = new javax.swing.JTextField();
-        jTextField62 = new javax.swing.JTextField();
-        jTextField63 = new javax.swing.JTextField();
-        jTextField64 = new javax.swing.JTextField();
-        jTextField65 = new javax.swing.JTextField();
-        jTextField66 = new javax.swing.JTextField();
-        jTextField67 = new javax.swing.JTextField();
-        jTextField68 = new javax.swing.JTextField();
-        jTextField69 = new javax.swing.JTextField();
-        jTextField70 = new javax.swing.JTextField();
-        jTextField71 = new javax.swing.JTextField();
-        jTextField72 = new javax.swing.JTextField();
-        jTextField73 = new javax.swing.JTextField();
-        jTextField74 = new javax.swing.JTextField();
-        jTextField75 = new javax.swing.JTextField();
-        jTextField76 = new javax.swing.JTextField();
-        jTextField77 = new javax.swing.JTextField();
-        jTextField78 = new javax.swing.JTextField();
-        jTextField79 = new javax.swing.JTextField();
-        jTextField80 = new javax.swing.JTextField();
-        jTextField81 = new javax.swing.JTextField();
-        jTextField82 = new javax.swing.JTextField();
-        jTextField83 = new javax.swing.JTextField();
-        jTextField84 = new javax.swing.JTextField();
-        jTextField85 = new javax.swing.JTextField();
-        jTextField86 = new javax.swing.JTextField();
-        jTextField87 = new javax.swing.JTextField();
-        jTextField88 = new javax.swing.JTextField();
-        jTextField89 = new javax.swing.JTextField();
-        jTextField90 = new javax.swing.JTextField();
-        jTextField91 = new javax.swing.JTextField();
-        jTextField92 = new javax.swing.JTextField();
-        jTextField93 = new javax.swing.JTextField();
-        jTextField94 = new javax.swing.JTextField();
-        jTextField95 = new javax.swing.JTextField();
-        jTextField96 = new javax.swing.JTextField();
-        jTextField97 = new javax.swing.JTextField();
-        jTextField98 = new javax.swing.JTextField();
-        jTextField99 = new javax.swing.JTextField();
-        jTextField100 = new javax.swing.JTextField();
-        jTextField101 = new javax.swing.JTextField();
-        jTextField102 = new javax.swing.JTextField();
-        jTextField103 = new javax.swing.JTextField();
-        jTextField104 = new javax.swing.JTextField();
-        jTextField105 = new javax.swing.JTextField();
-        jTextField106 = new javax.swing.JTextField();
-        jTextField107 = new javax.swing.JTextField();
-        jTextField108 = new javax.swing.JTextField();
-        jTextField109 = new javax.swing.JTextField();
-        jTextField110 = new javax.swing.JTextField();
-        jTextField111 = new javax.swing.JTextField();
-        jTextField112 = new javax.swing.JTextField();
-        jTextField113 = new javax.swing.JTextField();
-        jTextField114 = new javax.swing.JTextField();
-        jTextField115 = new javax.swing.JTextField();
-        jTextField116 = new javax.swing.JTextField();
-        jTextField117 = new javax.swing.JTextField();
-        jTextField118 = new javax.swing.JTextField();
-        jTextField119 = new javax.swing.JTextField();
-        jTextField120 = new javax.swing.JTextField();
-        jTextField121 = new javax.swing.JTextField();
-        jTextField122 = new javax.swing.JTextField();
-        jTextField123 = new javax.swing.JTextField();
-        jTextField124 = new javax.swing.JTextField();
-        jTextField125 = new javax.swing.JTextField();
-        jTextField126 = new javax.swing.JTextField();
-        jTextField127 = new javax.swing.JTextField();
-        jTextField128 = new javax.swing.JTextField();
-        jTextField129 = new javax.swing.JTextField();
-        jTextField130 = new javax.swing.JTextField();
-        jTextField131 = new javax.swing.JTextField();
-        jTextField132 = new javax.swing.JTextField();
-        jTextField133 = new javax.swing.JTextField();
-        jTextField134 = new javax.swing.JTextField();
-        jTextField135 = new javax.swing.JTextField();
-        jTextField136 = new javax.swing.JTextField();
-        jTextField137 = new javax.swing.JTextField();
-        jTextField138 = new javax.swing.JTextField();
-        jTextField139 = new javax.swing.JTextField();
-        jTextField140 = new javax.swing.JTextField();
-        jTextField141 = new javax.swing.JTextField();
-        jTextField142 = new javax.swing.JTextField();
-        jTextField143 = new javax.swing.JTextField();
-        jTextField144 = new javax.swing.JTextField();
-        jTextField145 = new javax.swing.JTextField();
-        jTextField146 = new javax.swing.JTextField();
-        jTextField147 = new javax.swing.JTextField();
-        jTextField148 = new javax.swing.JTextField();
-        jTextField149 = new javax.swing.JTextField();
-        jTextField150 = new javax.swing.JTextField();
-        jTextField151 = new javax.swing.JTextField();
-        jTextField152 = new javax.swing.JTextField();
-        jTextField153 = new javax.swing.JTextField();
-        jTextField154 = new javax.swing.JTextField();
-        jTextField155 = new javax.swing.JTextField();
-        jTextField156 = new javax.swing.JTextField();
-        jTextField157 = new javax.swing.JTextField();
-        jTextField158 = new javax.swing.JTextField();
-        jTextField159 = new javax.swing.JTextField();
-        jTextField160 = new javax.swing.JTextField();
-        jTextField161 = new javax.swing.JTextField();
-        jTextField162 = new javax.swing.JTextField();
-        jTextField163 = new javax.swing.JTextField();
-        jTextField164 = new javax.swing.JTextField();
-        jTextField165 = new javax.swing.JTextField();
-        jTextField166 = new javax.swing.JTextField();
-        jTextField167 = new javax.swing.JTextField();
-        jTextField168 = new javax.swing.JTextField();
-        jTextField169 = new javax.swing.JTextField();
-        jTextField170 = new javax.swing.JTextField();
-        jTextField171 = new javax.swing.JTextField();
-        jTextField172 = new javax.swing.JTextField();
-        jTextField173 = new javax.swing.JTextField();
-        jTextField174 = new javax.swing.JTextField();
-        jTextField175 = new javax.swing.JTextField();
-        jTextField176 = new javax.swing.JTextField();
-        jTextField177 = new javax.swing.JTextField();
-        jTextField178 = new javax.swing.JTextField();
-        jTextField179 = new javax.swing.JTextField();
-        jTextField180 = new javax.swing.JTextField();
-        jTextField181 = new javax.swing.JTextField();
-        jTextField182 = new javax.swing.JTextField();
-        jTextField183 = new javax.swing.JTextField();
-        jTextField184 = new javax.swing.JTextField();
-        jTextField185 = new javax.swing.JTextField();
-        jTextField186 = new javax.swing.JTextField();
-        jTextField187 = new javax.swing.JTextField();
-        jTextField188 = new javax.swing.JTextField();
-        jTextField189 = new javax.swing.JTextField();
-        jTextField190 = new javax.swing.JTextField();
-        jTextField191 = new javax.swing.JTextField();
-        jTextField192 = new javax.swing.JTextField();
-        jTextField193 = new javax.swing.JTextField();
-        jTextField194 = new javax.swing.JTextField();
-        jTextField195 = new javax.swing.JTextField();
-        jTextField196 = new javax.swing.JTextField();
-        jTextField197 = new javax.swing.JTextField();
-        jTextField198 = new javax.swing.JTextField();
-        jTextField199 = new javax.swing.JTextField();
-        jTextField200 = new javax.swing.JTextField();
-        jTextField201 = new javax.swing.JTextField();
-        jTextField202 = new javax.swing.JTextField();
-        jTextField203 = new javax.swing.JTextField();
-        jTextField204 = new javax.swing.JTextField();
-        jTextField205 = new javax.swing.JTextField();
-        jTextField206 = new javax.swing.JTextField();
-        jTextField207 = new javax.swing.JTextField();
-        jTextField208 = new javax.swing.JTextField();
-        jTextField209 = new javax.swing.JTextField();
-        jTextField210 = new javax.swing.JTextField();
-        jTextField211 = new javax.swing.JTextField();
-        jTextField212 = new javax.swing.JTextField();
-        jTextField213 = new javax.swing.JTextField();
-        jTextField214 = new javax.swing.JTextField();
-        jTextField215 = new javax.swing.JTextField();
-        jTextField216 = new javax.swing.JTextField();
-        jTextField217 = new javax.swing.JTextField();
-        jTextField218 = new javax.swing.JTextField();
-        jTextField219 = new javax.swing.JTextField();
-        jTextField220 = new javax.swing.JTextField();
-        jTextField221 = new javax.swing.JTextField();
-        jTextField222 = new javax.swing.JTextField();
-        jTextField223 = new javax.swing.JTextField();
-        jTextField224 = new javax.swing.JTextField();
-        jTextField225 = new javax.swing.JTextField();
-        jTextField226 = new javax.swing.JTextField();
-        jTextField227 = new javax.swing.JTextField();
-        jTextField228 = new javax.swing.JTextField();
-        jTextField229 = new javax.swing.JTextField();
-        jTextField230 = new javax.swing.JTextField();
-        jTextField231 = new javax.swing.JTextField();
-        jTextField232 = new javax.swing.JTextField();
-        jTextField233 = new javax.swing.JTextField();
-        jTextField234 = new javax.swing.JTextField();
-        jTextField235 = new javax.swing.JTextField();
-        jTextField236 = new javax.swing.JTextField();
-        jTextField237 = new javax.swing.JTextField();
-        jTextField238 = new javax.swing.JTextField();
-        jTextField239 = new javax.swing.JTextField();
-        jTextField240 = new javax.swing.JTextField();
-        jTextField241 = new javax.swing.JTextField();
-        jTextField242 = new javax.swing.JTextField();
-        jTextField243 = new javax.swing.JTextField();
-        jTextField244 = new javax.swing.JTextField();
-        jTextField245 = new javax.swing.JTextField();
-        jTextField246 = new javax.swing.JTextField();
-        jTextField247 = new javax.swing.JTextField();
-        jTextField248 = new javax.swing.JTextField();
-        jTextField249 = new javax.swing.JTextField();
-        jTextField250 = new javax.swing.JTextField();
-        jTextField251 = new javax.swing.JTextField();
-        jTextField252 = new javax.swing.JTextField();
-        jTextField253 = new javax.swing.JTextField();
-        jTextField254 = new javax.swing.JTextField();
-        jTextField255 = new javax.swing.JTextField();
-        jTextField256 = new javax.swing.JTextField();
-        jTextField257 = new javax.swing.JTextField();
-        jTextField258 = new javax.swing.JTextField();
-        jTextField259 = new javax.swing.JTextField();
-        jTextField260 = new javax.swing.JTextField();
-        jTextField261 = new javax.swing.JTextField();
-        jTextField262 = new javax.swing.JTextField();
-        jTextField263 = new javax.swing.JTextField();
-        jTextField264 = new javax.swing.JTextField();
-        jTextField265 = new javax.swing.JTextField();
-        jTextField266 = new javax.swing.JTextField();
-        jTextField267 = new javax.swing.JTextField();
-        jTextField268 = new javax.swing.JTextField();
-        jTextField269 = new javax.swing.JTextField();
-        jTextField270 = new javax.swing.JTextField();
-        jTextField271 = new javax.swing.JTextField();
-        jTextField272 = new javax.swing.JTextField();
-        jTextField273 = new javax.swing.JTextField();
-        jTextField274 = new javax.swing.JTextField();
-        jTextField275 = new javax.swing.JTextField();
-        jTextField276 = new javax.swing.JTextField();
-        jTextField277 = new javax.swing.JTextField();
-        jTextField278 = new javax.swing.JTextField();
-        jTextField279 = new javax.swing.JTextField();
-        jTextField280 = new javax.swing.JTextField();
-        jTextField281 = new javax.swing.JTextField();
-        jTextField282 = new javax.swing.JTextField();
-        jTextField283 = new javax.swing.JTextField();
-        jTextField284 = new javax.swing.JTextField();
-        jTextField285 = new javax.swing.JTextField();
-        jTextField286 = new javax.swing.JTextField();
-        jTextField287 = new javax.swing.JTextField();
-        jTextField288 = new javax.swing.JTextField();
-        jTextField289 = new javax.swing.JTextField();
-        jTextField290 = new javax.swing.JTextField();
-        jTextField291 = new javax.swing.JTextField();
-        jTextField292 = new javax.swing.JTextField();
-        jTextField293 = new javax.swing.JTextField();
-        jTextField294 = new javax.swing.JTextField();
-        jTextField295 = new javax.swing.JTextField();
-        jTextField296 = new javax.swing.JTextField();
-        jTextField297 = new javax.swing.JTextField();
-        jTextField298 = new javax.swing.JTextField();
-        jTextField299 = new javax.swing.JTextField();
-        jTextField300 = new javax.swing.JTextField();
-        jTextField301 = new javax.swing.JTextField();
-        jTextField302 = new javax.swing.JTextField();
-        jTextField303 = new javax.swing.JTextField();
-        jTextField304 = new javax.swing.JTextField();
-        jTextField305 = new javax.swing.JTextField();
-        jTextField306 = new javax.swing.JTextField();
-        jTextField307 = new javax.swing.JTextField();
-        jTextField308 = new javax.swing.JTextField();
-        jTextField309 = new javax.swing.JTextField();
-        jTextField310 = new javax.swing.JTextField();
-        jTextField311 = new javax.swing.JTextField();
-        jTextField312 = new javax.swing.JTextField();
-        jTextField313 = new javax.swing.JTextField();
-        jTextField314 = new javax.swing.JTextField();
-        jTextField315 = new javax.swing.JTextField();
-        jTextField316 = new javax.swing.JTextField();
-        jTextField317 = new javax.swing.JTextField();
-        jTextField318 = new javax.swing.JTextField();
-        jTextField319 = new javax.swing.JTextField();
-        jTextField320 = new javax.swing.JTextField();
-        jTextField321 = new javax.swing.JTextField();
-        jTextField322 = new javax.swing.JTextField();
-        jTextField323 = new javax.swing.JTextField();
-        jTextField324 = new javax.swing.JTextField();
-        jTextField325 = new javax.swing.JTextField();
-        jTextField326 = new javax.swing.JTextField();
-        jTextField327 = new javax.swing.JTextField();
-        jTextField328 = new javax.swing.JTextField();
-        jTextField329 = new javax.swing.JTextField();
-        jTextField330 = new javax.swing.JTextField();
-        jTextField331 = new javax.swing.JTextField();
-        jTextField332 = new javax.swing.JTextField();
-        jTextField333 = new javax.swing.JTextField();
-        jTextField334 = new javax.swing.JTextField();
-        jTextField335 = new javax.swing.JTextField();
-        jTextField336 = new javax.swing.JTextField();
-        jTextField337 = new javax.swing.JTextField();
-        jTextField338 = new javax.swing.JTextField();
-        jTextField339 = new javax.swing.JTextField();
-        jTextField340 = new javax.swing.JTextField();
-        jTextField341 = new javax.swing.JTextField();
-        jTextField342 = new javax.swing.JTextField();
-        jTextField343 = new javax.swing.JTextField();
-        jTextField344 = new javax.swing.JTextField();
-        jTextField345 = new javax.swing.JTextField();
-        jTextField346 = new javax.swing.JTextField();
-        jTextField347 = new javax.swing.JTextField();
-        jTextField348 = new javax.swing.JTextField();
-        jTextField349 = new javax.swing.JTextField();
-        jTextField350 = new javax.swing.JTextField();
-        jTextField351 = new javax.swing.JTextField();
-        jTextField352 = new javax.swing.JTextField();
-        jTextField353 = new javax.swing.JTextField();
-        jTextField354 = new javax.swing.JTextField();
-        jTextField355 = new javax.swing.JTextField();
-        jTextField356 = new javax.swing.JTextField();
-        jTextField357 = new javax.swing.JTextField();
-        jTextField358 = new javax.swing.JTextField();
-        jTextField359 = new javax.swing.JTextField();
-        jTextField360 = new javax.swing.JTextField();
-        jTextField361 = new javax.swing.JTextField();
-        jTextField362 = new javax.swing.JTextField();
-        jTextField363 = new javax.swing.JTextField();
-        jTextField364 = new javax.swing.JTextField();
-        jTextField365 = new javax.swing.JTextField();
-        jTextField366 = new javax.swing.JTextField();
-        jTextField367 = new javax.swing.JTextField();
-        jTextField368 = new javax.swing.JTextField();
-        jTextField369 = new javax.swing.JTextField();
-        jTextField370 = new javax.swing.JTextField();
-        jTextField371 = new javax.swing.JTextField();
-        jTextField372 = new javax.swing.JTextField();
-        jTextField373 = new javax.swing.JTextField();
-        jTextField374 = new javax.swing.JTextField();
-        jTextField375 = new javax.swing.JTextField();
-        jTextField376 = new javax.swing.JTextField();
-        jTextField377 = new javax.swing.JTextField();
-        jTextField378 = new javax.swing.JTextField();
-        jTextField379 = new javax.swing.JTextField();
-        jTextField380 = new javax.swing.JTextField();
-        jTextField381 = new javax.swing.JTextField();
-        jTextField382 = new javax.swing.JTextField();
-        jTextField383 = new javax.swing.JTextField();
-        jTextField384 = new javax.swing.JTextField();
-        jTextField385 = new javax.swing.JTextField();
-        jTextField386 = new javax.swing.JTextField();
-        jTextField387 = new javax.swing.JTextField();
-        jTextField388 = new javax.swing.JTextField();
-        jTextField389 = new javax.swing.JTextField();
-        jTextField390 = new javax.swing.JTextField();
-        jTextField391 = new javax.swing.JTextField();
-        jTextField392 = new javax.swing.JTextField();
-        jTextField393 = new javax.swing.JTextField();
-        jTextField394 = new javax.swing.JTextField();
-        jTextField395 = new javax.swing.JTextField();
-        jTextField396 = new javax.swing.JTextField();
-        jTextField397 = new javax.swing.JTextField();
-        jTextField398 = new javax.swing.JTextField();
-        jTextField399 = new javax.swing.JTextField();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        title1 = new javax.swing.JLabel();
+        checkDificil = new javax.swing.JCheckBox();
+        checkFacil = new javax.swing.JCheckBox();
+        checkIntermedio = new javax.swing.JCheckBox();
+        startGame = new javax.swing.JButton();
+        puntajes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -489,443 +54,62 @@ String[] arregloUnidimensional = {
         setResizable(false);
 
         title.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        title.setText("Cross Words ;)");
+        title.setText("Crossed Words ;)");
 
-        icon.setIcon(new javax.swing.ImageIcon("C:\\Users\\germh\\Documents\\NetBeansProjects\\HidalgoCrossWords\\src\\main\\resources\\images\\crossword64x64.png")); // NOI18N
+        icon.setIcon(new javax.swing.ImageIcon("C:\\Users\\germh\\Documents\\NetBeansProjects\\FinalHidalgo\\src\\main\\resources\\images\\crossword128x128.png")); // NOI18N
 
-        tablero.setLayout(new java.awt.GridLayout(20, 20));
-        tablero.add(jTextField0);
-        tablero.add(jTextField1);
-        tablero.add(jTextField2);
-        tablero.add(jTextField3);
-        tablero.add(jTextField4);
-        tablero.add(jTextField5);
-        tablero.add(jTextField6);
-        tablero.add(jTextField7);
-        tablero.add(jTextField8);
-        tablero.add(jTextField9);
-        tablero.add(jTextField10);
-        tablero.add(jTextField11);
-        tablero.add(jTextField12);
-        tablero.add(jTextField13);
-        tablero.add(jTextField14);
-        tablero.add(jTextField15);
-        tablero.add(jTextField16);
-        tablero.add(jTextField17);
-        tablero.add(jTextField18);
-        tablero.add(jTextField19);
-        tablero.add(jTextField20);
-        tablero.add(jTextField21);
-        tablero.add(jTextField22);
-        tablero.add(jTextField23);
-        tablero.add(jTextField24);
-        tablero.add(jTextField25);
-        tablero.add(jTextField26);
-        tablero.add(jTextField27);
-        tablero.add(jTextField28);
-        tablero.add(jTextField29);
-        tablero.add(jTextField30);
-        tablero.add(jTextField31);
-        tablero.add(jTextField32);
-        tablero.add(jTextField33);
-        tablero.add(jTextField34);
-        tablero.add(jTextField35);
-        tablero.add(jTextField36);
-        tablero.add(jTextField37);
-        tablero.add(jTextField38);
-        tablero.add(jTextField39);
-        tablero.add(jTextField40);
-        tablero.add(jTextField41);
-        tablero.add(jTextField42);
-        tablero.add(jTextField43);
-        tablero.add(jTextField44);
-        tablero.add(jTextField45);
-        tablero.add(jTextField46);
-        tablero.add(jTextField47);
-        tablero.add(jTextField48);
-        tablero.add(jTextField49);
-        tablero.add(jTextField50);
-        tablero.add(jTextField51);
-        tablero.add(jTextField52);
-        tablero.add(jTextField53);
-        tablero.add(jTextField54);
-        tablero.add(jTextField55);
-        tablero.add(jTextField56);
-        tablero.add(jTextField57);
-        tablero.add(jTextField58);
-        tablero.add(jTextField59);
-        tablero.add(jTextField60);
-        tablero.add(jTextField61);
-        tablero.add(jTextField62);
-        tablero.add(jTextField63);
-        tablero.add(jTextField64);
-        tablero.add(jTextField65);
-        tablero.add(jTextField66);
-        tablero.add(jTextField67);
-        tablero.add(jTextField68);
-        tablero.add(jTextField69);
-        tablero.add(jTextField70);
-        tablero.add(jTextField71);
-        tablero.add(jTextField72);
-        tablero.add(jTextField73);
-        tablero.add(jTextField74);
-        tablero.add(jTextField75);
-        tablero.add(jTextField76);
-        tablero.add(jTextField77);
-        tablero.add(jTextField78);
-        tablero.add(jTextField79);
-        tablero.add(jTextField80);
-        tablero.add(jTextField81);
-        tablero.add(jTextField82);
-        tablero.add(jTextField83);
-        tablero.add(jTextField84);
-        tablero.add(jTextField85);
-        tablero.add(jTextField86);
-        tablero.add(jTextField87);
-        tablero.add(jTextField88);
-        tablero.add(jTextField89);
-        tablero.add(jTextField90);
-        tablero.add(jTextField91);
-        tablero.add(jTextField92);
-        tablero.add(jTextField93);
-        tablero.add(jTextField94);
-        tablero.add(jTextField95);
-        tablero.add(jTextField96);
-        tablero.add(jTextField97);
-        tablero.add(jTextField98);
-        tablero.add(jTextField99);
-        tablero.add(jTextField100);
-        tablero.add(jTextField101);
-        tablero.add(jTextField102);
-        tablero.add(jTextField103);
-        tablero.add(jTextField104);
-        tablero.add(jTextField105);
-        tablero.add(jTextField106);
-        tablero.add(jTextField107);
-        tablero.add(jTextField108);
-        tablero.add(jTextField109);
-        tablero.add(jTextField110);
-        tablero.add(jTextField111);
-        tablero.add(jTextField112);
-        tablero.add(jTextField113);
-        tablero.add(jTextField114);
-        tablero.add(jTextField115);
-        tablero.add(jTextField116);
-        tablero.add(jTextField117);
-        tablero.add(jTextField118);
-        tablero.add(jTextField119);
-        tablero.add(jTextField120);
-        tablero.add(jTextField121);
-        tablero.add(jTextField122);
-        tablero.add(jTextField123);
-        tablero.add(jTextField124);
-        tablero.add(jTextField125);
-        tablero.add(jTextField126);
-        tablero.add(jTextField127);
-        tablero.add(jTextField128);
-        tablero.add(jTextField129);
-        tablero.add(jTextField130);
-        tablero.add(jTextField131);
-        tablero.add(jTextField132);
-        tablero.add(jTextField133);
-        tablero.add(jTextField134);
-        tablero.add(jTextField135);
-        tablero.add(jTextField136);
-        tablero.add(jTextField137);
-        tablero.add(jTextField138);
-        tablero.add(jTextField139);
-        tablero.add(jTextField140);
-        tablero.add(jTextField141);
-        tablero.add(jTextField142);
-        tablero.add(jTextField143);
-        tablero.add(jTextField144);
-        tablero.add(jTextField145);
-        tablero.add(jTextField146);
-        tablero.add(jTextField147);
-        tablero.add(jTextField148);
-        tablero.add(jTextField149);
-        tablero.add(jTextField150);
-        tablero.add(jTextField151);
-        tablero.add(jTextField152);
-        tablero.add(jTextField153);
-        tablero.add(jTextField154);
-        tablero.add(jTextField155);
-        tablero.add(jTextField156);
-        tablero.add(jTextField157);
-        tablero.add(jTextField158);
-        tablero.add(jTextField159);
-        tablero.add(jTextField160);
-        tablero.add(jTextField161);
-        tablero.add(jTextField162);
-        tablero.add(jTextField163);
-        tablero.add(jTextField164);
-        tablero.add(jTextField165);
-        tablero.add(jTextField166);
-        tablero.add(jTextField167);
-        tablero.add(jTextField168);
-        tablero.add(jTextField169);
-        tablero.add(jTextField170);
-        tablero.add(jTextField171);
-        tablero.add(jTextField172);
-        tablero.add(jTextField173);
-        tablero.add(jTextField174);
-        tablero.add(jTextField175);
-        tablero.add(jTextField176);
-        tablero.add(jTextField177);
-        tablero.add(jTextField178);
-        tablero.add(jTextField179);
-        tablero.add(jTextField180);
-        tablero.add(jTextField181);
-        tablero.add(jTextField182);
-        tablero.add(jTextField183);
-        tablero.add(jTextField184);
-        tablero.add(jTextField185);
-        tablero.add(jTextField186);
-        tablero.add(jTextField187);
-        tablero.add(jTextField188);
-        tablero.add(jTextField189);
-        tablero.add(jTextField190);
-        tablero.add(jTextField191);
-        tablero.add(jTextField192);
-        tablero.add(jTextField193);
-        tablero.add(jTextField194);
-        tablero.add(jTextField195);
-        tablero.add(jTextField196);
-        tablero.add(jTextField197);
-        tablero.add(jTextField198);
-        tablero.add(jTextField199);
-        tablero.add(jTextField200);
-        tablero.add(jTextField201);
-        tablero.add(jTextField202);
-        tablero.add(jTextField203);
-        tablero.add(jTextField204);
-        tablero.add(jTextField205);
-        tablero.add(jTextField206);
-        tablero.add(jTextField207);
-        tablero.add(jTextField208);
-        tablero.add(jTextField209);
-        tablero.add(jTextField210);
-        tablero.add(jTextField211);
-        tablero.add(jTextField212);
-        tablero.add(jTextField213);
-        tablero.add(jTextField214);
-        tablero.add(jTextField215);
-        tablero.add(jTextField216);
-        tablero.add(jTextField217);
-        tablero.add(jTextField218);
-        tablero.add(jTextField219);
-        tablero.add(jTextField220);
-        tablero.add(jTextField221);
-        tablero.add(jTextField222);
-        tablero.add(jTextField223);
-        tablero.add(jTextField224);
-        tablero.add(jTextField225);
-        tablero.add(jTextField226);
-        tablero.add(jTextField227);
-        tablero.add(jTextField228);
-        tablero.add(jTextField229);
-        tablero.add(jTextField230);
-        tablero.add(jTextField231);
-        tablero.add(jTextField232);
-        tablero.add(jTextField233);
-        tablero.add(jTextField234);
-        tablero.add(jTextField235);
-        tablero.add(jTextField236);
-        tablero.add(jTextField237);
-        tablero.add(jTextField238);
-        tablero.add(jTextField239);
-        tablero.add(jTextField240);
-        tablero.add(jTextField241);
-        tablero.add(jTextField242);
-        tablero.add(jTextField243);
-        tablero.add(jTextField244);
-        tablero.add(jTextField245);
-        tablero.add(jTextField246);
-        tablero.add(jTextField247);
-        tablero.add(jTextField248);
-        tablero.add(jTextField249);
-        tablero.add(jTextField250);
-        tablero.add(jTextField251);
-        tablero.add(jTextField252);
-        tablero.add(jTextField253);
-        tablero.add(jTextField254);
-        tablero.add(jTextField255);
-        tablero.add(jTextField256);
-        tablero.add(jTextField257);
-        tablero.add(jTextField258);
-        tablero.add(jTextField259);
-        tablero.add(jTextField260);
-        tablero.add(jTextField261);
-        tablero.add(jTextField262);
-        tablero.add(jTextField263);
-        tablero.add(jTextField264);
-        tablero.add(jTextField265);
-        tablero.add(jTextField266);
-        tablero.add(jTextField267);
-        tablero.add(jTextField268);
-        tablero.add(jTextField269);
-        tablero.add(jTextField270);
-        tablero.add(jTextField271);
-        tablero.add(jTextField272);
-        tablero.add(jTextField273);
-        tablero.add(jTextField274);
-        tablero.add(jTextField275);
-        tablero.add(jTextField276);
-        tablero.add(jTextField277);
-        tablero.add(jTextField278);
-        tablero.add(jTextField279);
-        tablero.add(jTextField280);
-        tablero.add(jTextField281);
-        tablero.add(jTextField282);
-        tablero.add(jTextField283);
-        tablero.add(jTextField284);
-        tablero.add(jTextField285);
-        tablero.add(jTextField286);
-        tablero.add(jTextField287);
-        tablero.add(jTextField288);
-        tablero.add(jTextField289);
-        tablero.add(jTextField290);
-        tablero.add(jTextField291);
-        tablero.add(jTextField292);
-        tablero.add(jTextField293);
-        tablero.add(jTextField294);
-        tablero.add(jTextField295);
-        tablero.add(jTextField296);
-        tablero.add(jTextField297);
-        tablero.add(jTextField298);
-        tablero.add(jTextField299);
-        tablero.add(jTextField300);
-        tablero.add(jTextField301);
-        tablero.add(jTextField302);
-        tablero.add(jTextField303);
-        tablero.add(jTextField304);
-        tablero.add(jTextField305);
-        tablero.add(jTextField306);
-        tablero.add(jTextField307);
-        tablero.add(jTextField308);
-        tablero.add(jTextField309);
-        tablero.add(jTextField310);
-        tablero.add(jTextField311);
-        tablero.add(jTextField312);
-        tablero.add(jTextField313);
-        tablero.add(jTextField314);
-        tablero.add(jTextField315);
-        tablero.add(jTextField316);
-        tablero.add(jTextField317);
-        tablero.add(jTextField318);
-        tablero.add(jTextField319);
-        tablero.add(jTextField320);
-        tablero.add(jTextField321);
-        tablero.add(jTextField322);
-        tablero.add(jTextField323);
-        tablero.add(jTextField324);
-        tablero.add(jTextField325);
-        tablero.add(jTextField326);
-        tablero.add(jTextField327);
-        tablero.add(jTextField328);
-        tablero.add(jTextField329);
-        tablero.add(jTextField330);
-        tablero.add(jTextField331);
-        tablero.add(jTextField332);
-        tablero.add(jTextField333);
-        tablero.add(jTextField334);
-        tablero.add(jTextField335);
-        tablero.add(jTextField336);
-        tablero.add(jTextField337);
-        tablero.add(jTextField338);
-        tablero.add(jTextField339);
-        tablero.add(jTextField340);
-        tablero.add(jTextField341);
-        tablero.add(jTextField342);
-        tablero.add(jTextField343);
-        tablero.add(jTextField344);
-        tablero.add(jTextField345);
-        tablero.add(jTextField346);
-        tablero.add(jTextField347);
-        tablero.add(jTextField348);
-        tablero.add(jTextField349);
-        tablero.add(jTextField350);
-        tablero.add(jTextField351);
-        tablero.add(jTextField352);
-        tablero.add(jTextField353);
-        tablero.add(jTextField354);
-        tablero.add(jTextField355);
-        tablero.add(jTextField356);
-        tablero.add(jTextField357);
-        tablero.add(jTextField358);
-        tablero.add(jTextField359);
-        tablero.add(jTextField360);
-        tablero.add(jTextField361);
-        tablero.add(jTextField362);
-        tablero.add(jTextField363);
-        tablero.add(jTextField364);
-        tablero.add(jTextField365);
-        tablero.add(jTextField366);
-        tablero.add(jTextField367);
-        tablero.add(jTextField368);
-        tablero.add(jTextField369);
-        tablero.add(jTextField370);
-        tablero.add(jTextField371);
-        tablero.add(jTextField372);
-        tablero.add(jTextField373);
-        tablero.add(jTextField374);
-        tablero.add(jTextField375);
-        tablero.add(jTextField376);
-        tablero.add(jTextField377);
-        tablero.add(jTextField378);
-        tablero.add(jTextField379);
-        tablero.add(jTextField380);
-        tablero.add(jTextField381);
-        tablero.add(jTextField382);
-        tablero.add(jTextField383);
-        tablero.add(jTextField384);
-        tablero.add(jTextField385);
-        tablero.add(jTextField386);
-        tablero.add(jTextField387);
-        tablero.add(jTextField388);
-        tablero.add(jTextField389);
-        tablero.add(jTextField390);
-        tablero.add(jTextField391);
-        tablero.add(jTextField392);
-        tablero.add(jTextField393);
-        tablero.add(jTextField394);
-        tablero.add(jTextField395);
-        tablero.add(jTextField396);
-        tablero.add(jTextField397);
-        tablero.add(jTextField398);
-        tablero.add(jTextField399);
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
+        title1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        title1.setText("Selecioná la dificultad para empezar");
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        checkDificil.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        checkDificil.setText("Dificil");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 436, Short.MAX_VALUE)
+        checkFacil.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        checkFacil.setText("Facil");
+
+        checkIntermedio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        checkIntermedio.setText("Intermedio");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(checkFacil, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(checkDificil, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(checkIntermedio, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 555, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(title1)
+                .addGap(18, 18, 18)
+                .addComponent(checkFacil)
+                .addGap(18, 18, 18)
+                .addComponent(checkIntermedio)
+                .addGap(18, 18, 18)
+                .addComponent(checkDificil)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Palabras Horizontales", jPanel2);
+        startGame.setBackground(new java.awt.Color(250, 117, 157));
+        startGame.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        startGame.setForeground(new java.awt.Color(255, 255, 255));
+        startGame.setText("Jugar");
+        startGame.setBorder(null);
+        startGame.setBorderPainted(false);
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 436, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 555, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Palabras Verticales", jPanel3);
+        puntajes.setBackground(new java.awt.Color(108, 201, 247));
+        puntajes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        puntajes.setForeground(new java.awt.Color(255, 255, 255));
+        puntajes.setText("Ver puntajes");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -933,32 +117,39 @@ String[] arregloUnidimensional = {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(icon)
                         .addGap(18, 18, 18)
                         .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(tablero, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(startGame, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(175, 175, 175))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(puntajes)
+                        .addGap(198, 198, 198))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(icon)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTabbedPane1)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(icon)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(title)))
-                        .addGap(18, 18, 18)
-                        .addComponent(tablero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(38, 38, 38)
+                        .addComponent(title)))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(startGame, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(puntajes)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         pack();
@@ -1001,411 +192,14 @@ String[] arregloUnidimensional = {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox checkDificil;
+    private javax.swing.JCheckBox checkFacil;
+    private javax.swing.JCheckBox checkIntermedio;
     private javax.swing.JLabel icon;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField0;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField100;
-    private javax.swing.JTextField jTextField101;
-    private javax.swing.JTextField jTextField102;
-    private javax.swing.JTextField jTextField103;
-    private javax.swing.JTextField jTextField104;
-    private javax.swing.JTextField jTextField105;
-    private javax.swing.JTextField jTextField106;
-    private javax.swing.JTextField jTextField107;
-    private javax.swing.JTextField jTextField108;
-    private javax.swing.JTextField jTextField109;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField110;
-    private javax.swing.JTextField jTextField111;
-    private javax.swing.JTextField jTextField112;
-    private javax.swing.JTextField jTextField113;
-    private javax.swing.JTextField jTextField114;
-    private javax.swing.JTextField jTextField115;
-    private javax.swing.JTextField jTextField116;
-    private javax.swing.JTextField jTextField117;
-    private javax.swing.JTextField jTextField118;
-    private javax.swing.JTextField jTextField119;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField120;
-    private javax.swing.JTextField jTextField121;
-    private javax.swing.JTextField jTextField122;
-    private javax.swing.JTextField jTextField123;
-    private javax.swing.JTextField jTextField124;
-    private javax.swing.JTextField jTextField125;
-    private javax.swing.JTextField jTextField126;
-    private javax.swing.JTextField jTextField127;
-    private javax.swing.JTextField jTextField128;
-    private javax.swing.JTextField jTextField129;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField130;
-    private javax.swing.JTextField jTextField131;
-    private javax.swing.JTextField jTextField132;
-    private javax.swing.JTextField jTextField133;
-    private javax.swing.JTextField jTextField134;
-    private javax.swing.JTextField jTextField135;
-    private javax.swing.JTextField jTextField136;
-    private javax.swing.JTextField jTextField137;
-    private javax.swing.JTextField jTextField138;
-    private javax.swing.JTextField jTextField139;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField140;
-    private javax.swing.JTextField jTextField141;
-    private javax.swing.JTextField jTextField142;
-    private javax.swing.JTextField jTextField143;
-    private javax.swing.JTextField jTextField144;
-    private javax.swing.JTextField jTextField145;
-    private javax.swing.JTextField jTextField146;
-    private javax.swing.JTextField jTextField147;
-    private javax.swing.JTextField jTextField148;
-    private javax.swing.JTextField jTextField149;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField150;
-    private javax.swing.JTextField jTextField151;
-    private javax.swing.JTextField jTextField152;
-    private javax.swing.JTextField jTextField153;
-    private javax.swing.JTextField jTextField154;
-    private javax.swing.JTextField jTextField155;
-    private javax.swing.JTextField jTextField156;
-    private javax.swing.JTextField jTextField157;
-    private javax.swing.JTextField jTextField158;
-    private javax.swing.JTextField jTextField159;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField160;
-    private javax.swing.JTextField jTextField161;
-    private javax.swing.JTextField jTextField162;
-    private javax.swing.JTextField jTextField163;
-    private javax.swing.JTextField jTextField164;
-    private javax.swing.JTextField jTextField165;
-    private javax.swing.JTextField jTextField166;
-    private javax.swing.JTextField jTextField167;
-    private javax.swing.JTextField jTextField168;
-    private javax.swing.JTextField jTextField169;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField170;
-    private javax.swing.JTextField jTextField171;
-    private javax.swing.JTextField jTextField172;
-    private javax.swing.JTextField jTextField173;
-    private javax.swing.JTextField jTextField174;
-    private javax.swing.JTextField jTextField175;
-    private javax.swing.JTextField jTextField176;
-    private javax.swing.JTextField jTextField177;
-    private javax.swing.JTextField jTextField178;
-    private javax.swing.JTextField jTextField179;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField180;
-    private javax.swing.JTextField jTextField181;
-    private javax.swing.JTextField jTextField182;
-    private javax.swing.JTextField jTextField183;
-    private javax.swing.JTextField jTextField184;
-    private javax.swing.JTextField jTextField185;
-    private javax.swing.JTextField jTextField186;
-    private javax.swing.JTextField jTextField187;
-    private javax.swing.JTextField jTextField188;
-    private javax.swing.JTextField jTextField189;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField190;
-    private javax.swing.JTextField jTextField191;
-    private javax.swing.JTextField jTextField192;
-    private javax.swing.JTextField jTextField193;
-    private javax.swing.JTextField jTextField194;
-    private javax.swing.JTextField jTextField195;
-    private javax.swing.JTextField jTextField196;
-    private javax.swing.JTextField jTextField197;
-    private javax.swing.JTextField jTextField198;
-    private javax.swing.JTextField jTextField199;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField200;
-    private javax.swing.JTextField jTextField201;
-    private javax.swing.JTextField jTextField202;
-    private javax.swing.JTextField jTextField203;
-    private javax.swing.JTextField jTextField204;
-    private javax.swing.JTextField jTextField205;
-    private javax.swing.JTextField jTextField206;
-    private javax.swing.JTextField jTextField207;
-    private javax.swing.JTextField jTextField208;
-    private javax.swing.JTextField jTextField209;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField210;
-    private javax.swing.JTextField jTextField211;
-    private javax.swing.JTextField jTextField212;
-    private javax.swing.JTextField jTextField213;
-    private javax.swing.JTextField jTextField214;
-    private javax.swing.JTextField jTextField215;
-    private javax.swing.JTextField jTextField216;
-    private javax.swing.JTextField jTextField217;
-    private javax.swing.JTextField jTextField218;
-    private javax.swing.JTextField jTextField219;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField220;
-    private javax.swing.JTextField jTextField221;
-    private javax.swing.JTextField jTextField222;
-    private javax.swing.JTextField jTextField223;
-    private javax.swing.JTextField jTextField224;
-    private javax.swing.JTextField jTextField225;
-    private javax.swing.JTextField jTextField226;
-    private javax.swing.JTextField jTextField227;
-    private javax.swing.JTextField jTextField228;
-    private javax.swing.JTextField jTextField229;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField230;
-    private javax.swing.JTextField jTextField231;
-    private javax.swing.JTextField jTextField232;
-    private javax.swing.JTextField jTextField233;
-    private javax.swing.JTextField jTextField234;
-    private javax.swing.JTextField jTextField235;
-    private javax.swing.JTextField jTextField236;
-    private javax.swing.JTextField jTextField237;
-    private javax.swing.JTextField jTextField238;
-    private javax.swing.JTextField jTextField239;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField240;
-    private javax.swing.JTextField jTextField241;
-    private javax.swing.JTextField jTextField242;
-    private javax.swing.JTextField jTextField243;
-    private javax.swing.JTextField jTextField244;
-    private javax.swing.JTextField jTextField245;
-    private javax.swing.JTextField jTextField246;
-    private javax.swing.JTextField jTextField247;
-    private javax.swing.JTextField jTextField248;
-    private javax.swing.JTextField jTextField249;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField250;
-    private javax.swing.JTextField jTextField251;
-    private javax.swing.JTextField jTextField252;
-    private javax.swing.JTextField jTextField253;
-    private javax.swing.JTextField jTextField254;
-    private javax.swing.JTextField jTextField255;
-    private javax.swing.JTextField jTextField256;
-    private javax.swing.JTextField jTextField257;
-    private javax.swing.JTextField jTextField258;
-    private javax.swing.JTextField jTextField259;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField260;
-    private javax.swing.JTextField jTextField261;
-    private javax.swing.JTextField jTextField262;
-    private javax.swing.JTextField jTextField263;
-    private javax.swing.JTextField jTextField264;
-    private javax.swing.JTextField jTextField265;
-    private javax.swing.JTextField jTextField266;
-    private javax.swing.JTextField jTextField267;
-    private javax.swing.JTextField jTextField268;
-    private javax.swing.JTextField jTextField269;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField270;
-    private javax.swing.JTextField jTextField271;
-    private javax.swing.JTextField jTextField272;
-    private javax.swing.JTextField jTextField273;
-    private javax.swing.JTextField jTextField274;
-    private javax.swing.JTextField jTextField275;
-    private javax.swing.JTextField jTextField276;
-    private javax.swing.JTextField jTextField277;
-    private javax.swing.JTextField jTextField278;
-    private javax.swing.JTextField jTextField279;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField280;
-    private javax.swing.JTextField jTextField281;
-    private javax.swing.JTextField jTextField282;
-    private javax.swing.JTextField jTextField283;
-    private javax.swing.JTextField jTextField284;
-    private javax.swing.JTextField jTextField285;
-    private javax.swing.JTextField jTextField286;
-    private javax.swing.JTextField jTextField287;
-    private javax.swing.JTextField jTextField288;
-    private javax.swing.JTextField jTextField289;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField290;
-    private javax.swing.JTextField jTextField291;
-    private javax.swing.JTextField jTextField292;
-    private javax.swing.JTextField jTextField293;
-    private javax.swing.JTextField jTextField294;
-    private javax.swing.JTextField jTextField295;
-    private javax.swing.JTextField jTextField296;
-    private javax.swing.JTextField jTextField297;
-    private javax.swing.JTextField jTextField298;
-    private javax.swing.JTextField jTextField299;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField300;
-    private javax.swing.JTextField jTextField301;
-    private javax.swing.JTextField jTextField302;
-    private javax.swing.JTextField jTextField303;
-    private javax.swing.JTextField jTextField304;
-    private javax.swing.JTextField jTextField305;
-    private javax.swing.JTextField jTextField306;
-    private javax.swing.JTextField jTextField307;
-    private javax.swing.JTextField jTextField308;
-    private javax.swing.JTextField jTextField309;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField310;
-    private javax.swing.JTextField jTextField311;
-    private javax.swing.JTextField jTextField312;
-    private javax.swing.JTextField jTextField313;
-    private javax.swing.JTextField jTextField314;
-    private javax.swing.JTextField jTextField315;
-    private javax.swing.JTextField jTextField316;
-    private javax.swing.JTextField jTextField317;
-    private javax.swing.JTextField jTextField318;
-    private javax.swing.JTextField jTextField319;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField320;
-    private javax.swing.JTextField jTextField321;
-    private javax.swing.JTextField jTextField322;
-    private javax.swing.JTextField jTextField323;
-    private javax.swing.JTextField jTextField324;
-    private javax.swing.JTextField jTextField325;
-    private javax.swing.JTextField jTextField326;
-    private javax.swing.JTextField jTextField327;
-    private javax.swing.JTextField jTextField328;
-    private javax.swing.JTextField jTextField329;
-    private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField330;
-    private javax.swing.JTextField jTextField331;
-    private javax.swing.JTextField jTextField332;
-    private javax.swing.JTextField jTextField333;
-    private javax.swing.JTextField jTextField334;
-    private javax.swing.JTextField jTextField335;
-    private javax.swing.JTextField jTextField336;
-    private javax.swing.JTextField jTextField337;
-    private javax.swing.JTextField jTextField338;
-    private javax.swing.JTextField jTextField339;
-    private javax.swing.JTextField jTextField34;
-    private javax.swing.JTextField jTextField340;
-    private javax.swing.JTextField jTextField341;
-    private javax.swing.JTextField jTextField342;
-    private javax.swing.JTextField jTextField343;
-    private javax.swing.JTextField jTextField344;
-    private javax.swing.JTextField jTextField345;
-    private javax.swing.JTextField jTextField346;
-    private javax.swing.JTextField jTextField347;
-    private javax.swing.JTextField jTextField348;
-    private javax.swing.JTextField jTextField349;
-    private javax.swing.JTextField jTextField35;
-    private javax.swing.JTextField jTextField350;
-    private javax.swing.JTextField jTextField351;
-    private javax.swing.JTextField jTextField352;
-    private javax.swing.JTextField jTextField353;
-    private javax.swing.JTextField jTextField354;
-    private javax.swing.JTextField jTextField355;
-    private javax.swing.JTextField jTextField356;
-    private javax.swing.JTextField jTextField357;
-    private javax.swing.JTextField jTextField358;
-    private javax.swing.JTextField jTextField359;
-    private javax.swing.JTextField jTextField36;
-    private javax.swing.JTextField jTextField360;
-    private javax.swing.JTextField jTextField361;
-    private javax.swing.JTextField jTextField362;
-    private javax.swing.JTextField jTextField363;
-    private javax.swing.JTextField jTextField364;
-    private javax.swing.JTextField jTextField365;
-    private javax.swing.JTextField jTextField366;
-    private javax.swing.JTextField jTextField367;
-    private javax.swing.JTextField jTextField368;
-    private javax.swing.JTextField jTextField369;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField370;
-    private javax.swing.JTextField jTextField371;
-    private javax.swing.JTextField jTextField372;
-    private javax.swing.JTextField jTextField373;
-    private javax.swing.JTextField jTextField374;
-    private javax.swing.JTextField jTextField375;
-    private javax.swing.JTextField jTextField376;
-    private javax.swing.JTextField jTextField377;
-    private javax.swing.JTextField jTextField378;
-    private javax.swing.JTextField jTextField379;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField380;
-    private javax.swing.JTextField jTextField381;
-    private javax.swing.JTextField jTextField382;
-    private javax.swing.JTextField jTextField383;
-    private javax.swing.JTextField jTextField384;
-    private javax.swing.JTextField jTextField385;
-    private javax.swing.JTextField jTextField386;
-    private javax.swing.JTextField jTextField387;
-    private javax.swing.JTextField jTextField388;
-    private javax.swing.JTextField jTextField389;
-    private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField390;
-    private javax.swing.JTextField jTextField391;
-    private javax.swing.JTextField jTextField392;
-    private javax.swing.JTextField jTextField393;
-    private javax.swing.JTextField jTextField394;
-    private javax.swing.JTextField jTextField395;
-    private javax.swing.JTextField jTextField396;
-    private javax.swing.JTextField jTextField397;
-    private javax.swing.JTextField jTextField398;
-    private javax.swing.JTextField jTextField399;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField40;
-    private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField42;
-    private javax.swing.JTextField jTextField43;
-    private javax.swing.JTextField jTextField44;
-    private javax.swing.JTextField jTextField45;
-    private javax.swing.JTextField jTextField46;
-    private javax.swing.JTextField jTextField47;
-    private javax.swing.JTextField jTextField48;
-    private javax.swing.JTextField jTextField49;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField50;
-    private javax.swing.JTextField jTextField51;
-    private javax.swing.JTextField jTextField52;
-    private javax.swing.JTextField jTextField53;
-    private javax.swing.JTextField jTextField54;
-    private javax.swing.JTextField jTextField55;
-    private javax.swing.JTextField jTextField56;
-    private javax.swing.JTextField jTextField57;
-    private javax.swing.JTextField jTextField58;
-    private javax.swing.JTextField jTextField59;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField60;
-    private javax.swing.JTextField jTextField61;
-    private javax.swing.JTextField jTextField62;
-    private javax.swing.JTextField jTextField63;
-    private javax.swing.JTextField jTextField64;
-    private javax.swing.JTextField jTextField65;
-    private javax.swing.JTextField jTextField66;
-    private javax.swing.JTextField jTextField67;
-    private javax.swing.JTextField jTextField68;
-    private javax.swing.JTextField jTextField69;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField70;
-    private javax.swing.JTextField jTextField71;
-    private javax.swing.JTextField jTextField72;
-    private javax.swing.JTextField jTextField73;
-    private javax.swing.JTextField jTextField74;
-    private javax.swing.JTextField jTextField75;
-    private javax.swing.JTextField jTextField76;
-    private javax.swing.JTextField jTextField77;
-    private javax.swing.JTextField jTextField78;
-    private javax.swing.JTextField jTextField79;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField80;
-    private javax.swing.JTextField jTextField81;
-    private javax.swing.JTextField jTextField82;
-    private javax.swing.JTextField jTextField83;
-    private javax.swing.JTextField jTextField84;
-    private javax.swing.JTextField jTextField85;
-    private javax.swing.JTextField jTextField86;
-    private javax.swing.JTextField jTextField87;
-    private javax.swing.JTextField jTextField88;
-    private javax.swing.JTextField jTextField89;
-    private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextField jTextField90;
-    private javax.swing.JTextField jTextField91;
-    private javax.swing.JTextField jTextField92;
-    private javax.swing.JTextField jTextField93;
-    private javax.swing.JTextField jTextField94;
-    private javax.swing.JTextField jTextField95;
-    private javax.swing.JTextField jTextField96;
-    private javax.swing.JTextField jTextField97;
-    private javax.swing.JTextField jTextField98;
-    private javax.swing.JTextField jTextField99;
-    private javax.swing.JPanel tablero;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton puntajes;
+    private javax.swing.JButton startGame;
     private javax.swing.JLabel title;
+    private javax.swing.JLabel title1;
     // End of variables declaration//GEN-END:variables
 }
