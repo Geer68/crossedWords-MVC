@@ -1,11 +1,15 @@
 package Controller;
 
-import Model.Cronometro;
-import Model.CronometroListener;
+import Model.JugadorModel;
 import Model.Model;
+import View.JugadorView;
 import View.View;
+import java.awt.Component;
+import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
-public class Controller implements CronometroListener {
+public class Controller {
 
     private Model model;
     private View view;
@@ -13,24 +17,65 @@ public class Controller implements CronometroListener {
     public Controller(View v1, Model m1) {
         this.model = m1;
         this.view = v1;
+        this.model.setController(this);
         loadTablero();
         v1.setVisible(true);
-        cargarCronometros();
+        m1.cargarCronometros();
         v1.setTitle("Cross Words");
+        addFacilListeners();
     }
 
     private void loadTablero() {
         model.loadTablero(view.getTablero());
     }
-    
-    private void cargarCronometros(){
-        Cronometro cronometro = new Cronometro(60);
-        cronometro.agregarListener(this);
-        cronometro.startTimer();
+
+    public void actualizarTiempo(int segundos) {
+        view.getTiempo().setText(String.valueOf(segundos));
+        if (!"Facil".equals(Model.getDificultad())) {
+            actualizarPuntos(model.checkPuntaje(view.getTablero()));
+        }
+
+    }
+
+    private void addFacilListeners() {
+        Component[] components = this.view.getTablero().getComponents();
+
+        for (Component component : components) {
+            if (component instanceof JTextField textField) {
+
+                // Agregar DocumentListener para escuchar cambios en el texto
+                textField.getDocument().addDocumentListener(new DocumentListener() {
+                    @Override
+                    public void insertUpdate(DocumentEvent e) {
+                        handleTextChange();
+                    }
+
+                    @Override
+                    public void removeUpdate(DocumentEvent e) {
+                        handleTextChange();
+                    }
+
+                    @Override
+                    public void changedUpdate(DocumentEvent e) {
+                        // No relevante para este caso
+                    }
+                });
+            }
+        }
+    }
+
+    private void handleTextChange() {
+        actualizarPuntos(model.checkPuntaje(view.getTablero()));
+    }
+
+    public void actualizarPuntos(int puntos) {
+        view.getPuntos().setText(String.valueOf(puntos));
     }
     
-    @Override
-    public void actualizarSegundosRestantes(int segundos){
-        view.getTiempo().setText(String.valueOf(segundos));
+    public void winnerStart(){
+        int segundos = Integer.parseInt(this.view.getTiempo().getText());
+        JugadorView playerView = new JugadorView();
+        JugadorModel playerModel = new JugadorModel();
+        JugadorController controlador = new JugadorController(playerView, playerModel, segundos);
     }
 }

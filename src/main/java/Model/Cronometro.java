@@ -9,6 +9,7 @@ public class Cronometro {
 
     private int segundosRestantes;
     private List<CronometroListener> listeners;
+    private Timer timer;
 
     public Cronometro(int segundos) {
         this.segundosRestantes = segundos;
@@ -20,11 +21,14 @@ public class Cronometro {
     }
 
     public void startTimer() {
-        Timer timer = new Timer(1000, new ActionListener() {
+        timer = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 segundosRestantes--;
                 notificarListeners();
+                if (segundosRestantes <= 0) {
+                    stopTimer();
+                }
             }
         });
         timer.start();
@@ -33,6 +37,12 @@ public class Cronometro {
     private void notificarListeners() {
         for (CronometroListener listener : listeners) {
             listener.actualizarSegundosRestantes(segundosRestantes);
+        }
+    }
+
+    public void stopTimer() {
+        if (timer != null && timer.isRunning()) {
+            timer.stop();
         }
     }
 }

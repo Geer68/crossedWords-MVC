@@ -1,0 +1,4 @@
+
+ger,182,Facil
+german,360,Intermedio
+germanchito,298,Dificil

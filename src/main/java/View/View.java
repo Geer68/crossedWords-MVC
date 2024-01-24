@@ -985,12 +985,13 @@ String[] arregloUnidimensional = {
             panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTPLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addGroup(panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelPuntos)
-                    .addComponent(puntos)
+                .addGroup(panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(labelTiempo)
-                        .addComponent(tiempo)))
+                        .addComponent(tiempo))
+                    .addGroup(panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelPuntos)
+                        .addComponent(puntos)))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
