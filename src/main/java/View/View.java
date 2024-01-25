@@ -6,63 +6,14 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 public class View extends javax.swing.JFrame {
-String[] arregloUnidimensional = {
-    "J", "0", "M", "0", "0", "0", "0", "D", "0", "0", "0", "0", "0", "0", "U", "R", "L", "0", "0",
-    "S", "L", "O", "T", "0", "B", "U", "S", "0", "0", "S", "0", "0", "0", "0", "0", "E", "0", "D",
-    "0", "0", "U", "0", "P", "Y", "0", "0", "0", "M", "O", "U", "S", "E", "P", "A", "D", "0", "A", "0",
-    "0", "0", "S", "0", "0", "T", "0", "0", "0", "0", "F", "0", "0", "0", "0", "C", "0", "0", "T", "0",
-    "F", "U", "E", "N", "T", "E", "0", "C", "0", "0", "T", "0", "0", "L", "0", "C", "D", "R", "O", "M",
-    "D", "0", "0", "0", "0", "0", "H", "A", "R", "D", "W", "A", "R", "E", "0", "E", "0", "0", "S", "0",
-    "P", "0", "0", "0", "0", "0", "0", "R", "0", "0", "A", "0", "0", "C", "0", "S", "0", "M", "0", "0",
-    "0", "0", "0", "P", "0", "0", "R", "0", "0", "T", "0", "S", "0", "E", "0", "0", "R", "0", "B", "O",
-    "T", "O", "N", "E", "S", "S", "E", "0", "0", "O", "0", "0", "0", "M", "0", "0", "E", "0", "A", "0",
-    "0", "0", "0", "T", "0", "0", "0", "S", "E", "R", "V", "I", "D", "O", "R", "0", "L", "0", "R", "0",
-    "0", "0", "0", "A", "0", "0", "I", "C", "#", "C", "0", "0", "0", "R", "0", "0", "A", "0", "R", "A",
-    "M", "0", "0", "0", "T", "E", "C", "L", "A", "D", "O", "0", "B", "I", "T", "0", "C", "0", "A", "0",
-    "O", "0", "0", "0", "0", "0", "O", "0", "R", "0", "0", "0", "0", "A", "0", "0", "I", "0", "0", "0",
-    "N", "0", "0", "W", "0", "0", "N", "0", "C", "0", "0", "0", "0", "0", "0", "0", "B", "O", "0", "0",
-    "O", "0", "0", "I", "0", "0", "I", "0", "0", "O", "0", "H", "0", "0", "0", "W", "O", "R", "D", "N",
-    "0", "I", "N", "T", "E", "R", "N", "E", "T", "0", "D", "I", "S", "C", "O", "0", "0", "O", "0", "0",
-    "0", "0", "O", "0", "0", "D", "0", "0", "0", "0", "V", "0", "0", "0", "0", "0", "O", "0", "0", "I",
-    "M", "P", "R", "E", "S", "O", "R", "A", "0", "M", "O", "D", "E", "M", "0", "0", "T", "0", "0", "0",
-    "0", "0", "0", "W", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "M", "A", "C",
-    "O", "S", "0", "M", "I", "C", "R", "O", "S", "O", "F", "T", "0", "0"
-};
     public View() {
         initComponents();
-//        Component[] components = tablero.getComponents();
-//        int contador = 0;
-//        for (Component component : components) {
-//            if (component instanceof JTextField) {
-//                JTextField textField = (JTextField) component;
-//                textField.setText(arregloUnidimensional[contador]);
-//                textField.setHorizontalAlignment(JTextField.CENTER);
-//                textField.setFont(new Font("Seoge UI", Font.BOLD, 12));
-//                if(textField.getText().equals("0")){
-//                    setForeground(Color.BLACK);
-//                }
-//                contador++;
-//            }
-//        }
     }
-
-//    public void fillTablero(JTextField[][] matriz) {
-//        System.out.println("");
-//        JPanel panel = new JPanel(new GridLayout(20, 20));
-//        for (JTextField[] fila : matriz) {
-//            for (JTextField casillero : fila) {
-//                casillero.setHorizontalAlignment(JTextField.CENTER);
-//                panel.add(casillero);
-//            }
-//        }
-//        getContentPane().add(panel);
-//        pack();
-//        setLocationRelativeTo(null);
-//        setVisible(true);
-//    }
 
     public JPanel getTablero() {
         return tablero;
@@ -83,6 +34,24 @@ String[] arregloUnidimensional = {
     public JLabel getTiempo() {
         return tiempo;
     }
+
+    public JPanel getjPanel2() {
+        return jPanel2;
+    }
+
+    public JPanel getjPanel3() {
+        return jPanel3;
+    }
+
+    public JTable getTablaHorizontal() {
+        return TablaHorizontal;
+    }
+
+    public JTable getTablaVertical() {
+        return TablaVertical;
+    }
+
+  
     
     
     
@@ -500,7 +469,11 @@ String[] arregloUnidimensional = {
         jTextField399 = new javax.swing.JTextField();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TablaHorizontal = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        TablaVertical = new javax.swing.JTable();
         panelTP = new javax.swing.JPanel();
         labelPuntos = new javax.swing.JLabel();
         puntos = new javax.swing.JLabel();
@@ -924,30 +897,100 @@ String[] arregloUnidimensional = {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        TablaHorizontal.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        TablaHorizontal.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Num", "Pista"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        TablaHorizontal.setToolTipText("");
+        TablaHorizontal.setRowHeight(30);
+        TablaHorizontal.setSelectionBackground(new java.awt.Color(255, 204, 255));
+        jScrollPane1.setViewportView(TablaHorizontal);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 436, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 555, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Palabras Horizontales", jPanel2);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
+        TablaVertical.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        TablaVertical.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Num", "Pista"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        TablaVertical.setToolTipText("");
+        TablaVertical.setRowHeight(30);
+        TablaVertical.setSelectionBackground(new java.awt.Color(255, 204, 255));
+        jScrollPane2.setViewportView(TablaVertical);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 436, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 555, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Palabras Verticales", jPanel3);
@@ -1009,7 +1052,7 @@ String[] arregloUnidimensional = {
                         .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(panelTP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(37, 37, 37)
+                .addGap(18, 18, 18)
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
@@ -1018,9 +1061,7 @@ String[] arregloUnidimensional = {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTabbedPane1)
-                        .addContainerGap())
+                    .addComponent(jTabbedPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(icon)
@@ -1072,9 +1113,13 @@ String[] arregloUnidimensional = {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable TablaHorizontal;
+    private javax.swing.JTable TablaVertical;
     private javax.swing.JLabel icon;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField0;
     private javax.swing.JTextField jTextField1;

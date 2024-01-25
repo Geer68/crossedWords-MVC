@@ -1,6 +1,5 @@
 package Controller;
 
-import Model.Cronometro;
 import Model.JugadorModel;
 import Model.Model;
 import View.JugadorView;
@@ -28,7 +27,6 @@ public class JugadorController implements ActionListener {
         Object source = e.getSource();
 
         if (source == view.getSaveGame()) {
-            System.out.println(view.getJugadorName().getText());
             model.saveJugador(view.getJugadorName().getText(), model.calculatePoints(segundos), Model.getDificultad());
             if (!model.guardarDatos()) {
                 JOptionPane.showMessageDialog(null, "Error al guardar datos", "Error", JOptionPane.ERROR_MESSAGE);

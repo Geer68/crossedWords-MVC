@@ -1,6 +1,7 @@
 package Model;
 
 public class Jugador {
+
     private String nombre;
     private int puntos;
     private String partida;
@@ -13,7 +14,6 @@ public class Jugador {
 
     public Jugador() {
     }
-    
 
     public String getNombre() {
         return nombre;
@@ -39,10 +39,10 @@ public class Jugador {
         this.partida = partida;
     }
 
-    public String toString(){
-        return nombre+","+puntos+","+partida;
+    public String toString() {
+        return nombre + "," + puntos + "," + partida;
     }
-    
+
     public static Jugador fromString(String jugadorString) {
         String[] partes = jugadorString.split(",");
         if (partes.length == 3) {

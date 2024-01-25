@@ -62,7 +62,6 @@ public class MenuController implements ActionListener {
         if (difSelect == null) {
             JOptionPane.showMessageDialog(null, "Debes seleccionar una dificultad antes de iniciar el juego.", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
-            System.out.println(difSelect);
             Model.setDificultad(difSelect);
             vista.setVisible(true);
             View v1 = new View();

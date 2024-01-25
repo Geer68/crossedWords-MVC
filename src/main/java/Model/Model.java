@@ -53,18 +53,17 @@ public class Model implements CronometroListener {
     public int checkPuntaje(JPanel tablero) {
         int puntos = tableroHanddler.checkBoxesPoint(tablero);
         checkWinner(puntos);
-        System.out.println("Winn"+winner);
-        if(!winner){
+        if (!winner) {
             return puntos;
         }
-        if(!"Facil".equals(Model.getDificultad())){
+        if (!"Facil".equals(Model.getDificultad())) {
             cronometro.stopTimer();
-        }        
+        }
         controller.winnerStart();
         return puntos;
     }
-    
-    private void checkWinner(int puntos){
+
+    private void checkWinner(int puntos) {
         this.winner = puntos == 2;
     }
 

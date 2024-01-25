@@ -2,12 +2,14 @@ package Controller;
 
 import Model.JugadorModel;
 import Model.Model;
+import Model.TablaPista;
 import View.JugadorView;
 import View.View;
 import java.awt.Component;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.table.DefaultTableModel;
 
 public class Controller {
 
@@ -19,10 +21,21 @@ public class Controller {
         this.view = v1;
         this.model.setController(this);
         loadTablero();
+        loadTablas();
         v1.setVisible(true);
         m1.cargarCronometros();
         v1.setTitle("Cross Words");
         addFacilListeners();
+    }
+
+    private void loadTablas() {
+        DefaultTableModel tHorizontal = (DefaultTableModel) view.getTablaHorizontal().getModel();
+        DefaultTableModel tVertical = (DefaultTableModel) view.getTablaVertical().getModel();
+        TablaPista p1 = new TablaPista();
+        p1.pistasHorizontales(tHorizontal);
+        p1.pistasVerticales(tVertical);
+        p1.prettyTable(view.getTablaHorizontal());
+        p1.prettyTable(view.getTablaVertical());
     }
 
     private void loadTablero() {
@@ -71,11 +84,12 @@ public class Controller {
     public void actualizarPuntos(int puntos) {
         view.getPuntos().setText(String.valueOf(puntos));
     }
-    
-    public void winnerStart(){
+
+    public void winnerStart() {
         int segundos = Integer.parseInt(this.view.getTiempo().getText());
         JugadorView playerView = new JugadorView();
         JugadorModel playerModel = new JugadorModel();
         JugadorController controlador = new JugadorController(playerView, playerModel, segundos);
     }
+
 }

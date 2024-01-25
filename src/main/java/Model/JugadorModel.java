@@ -5,22 +5,20 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class JugadorModel {
+
     private List<Jugador> jugadores;
     private Jugador jugador;
 
     public JugadorModel(String nombre, int puntos, String dificultad) {
         this.jugador = new Jugador(nombre, puntos, dificultad);
-    } 
-
-    public JugadorModel() {
-//        this.jugadores = new ArrayList<>();
-//        cargarDatos();
     }
-    public void saveJugador(String nombre, int puntos, String dificultad){
+
+    public JugadorModel() {}
+
+    public void saveJugador(String nombre, int puntos, String dificultad) {
         this.jugador = new Jugador(nombre, puntos, dificultad);
     }
 
@@ -55,15 +53,17 @@ public class JugadorModel {
             e.printStackTrace();
         }
     }
-    
+
     public int calculatePoints(int segundos) {
         return switch (Model.getDificultad()) {
-            case "Facil" -> 182;
-            case "Intermedio" -> 182 + (int) (segundos * 1.5);
-            case "Dificil" -> 182 + (int) (segundos * 3.0);
-            default -> 0;
+            case "Facil" ->
+                182;
+            case "Intermedio" ->
+                182 + (int) (segundos * 1.5);
+            case "Dificil" ->
+                182 + (int) (segundos * 3.0);
+            default ->
+                0;
         };
     }
 }
-
-
