@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.JugadorModel;
+import Model.PuntajesModel;
 import Model.Model;
 import View.JugadorView;
 import java.awt.event.ActionEvent;
@@ -10,10 +10,10 @@ import javax.swing.JOptionPane;
 public class JugadorController implements ActionListener {
 
     private JugadorView view;
-    private JugadorModel model;
+    private PuntajesModel model;
     private int segundos;
 
-    public JugadorController(JugadorView view, JugadorModel model, int segundos) {
+    public JugadorController(JugadorView view, PuntajesModel model, int segundos) {
         this.view = view;
         this.model = model;
         this.segundos = segundos;

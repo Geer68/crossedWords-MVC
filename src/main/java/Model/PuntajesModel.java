@@ -2,21 +2,27 @@ package Model;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
-public class JugadorModel {
+public class PuntajesModel {
 
-    private List<Jugador> jugadores;
+    final private ArrayList<Jugador> jugadores = new ArrayList();
     private Jugador jugador;
 
-    public JugadorModel(String nombre, int puntos, String dificultad) {
-        this.jugador = new Jugador(nombre, puntos, dificultad);
+    public PuntajesModel(String nombre, int puntos, String dificultad) {
+        jugadores.add(new Jugador(nombre, puntos, dificultad));
     }
 
-    public JugadorModel() {}
+    public PuntajesModel()  {
+        //this.cargarDatos();
+    }
 
     public void saveJugador(String nombre, int puntos, String dificultad) {
         this.jugador = new Jugador(nombre, puntos, dificultad);
@@ -25,19 +31,18 @@ public class JugadorModel {
     public boolean guardarDatos() {
         try {
             String rutaArchivo = System.getProperty("user.dir") + "/src/main/java/Model/datos.txt";
-            System.out.println(rutaArchivo);
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(rutaArchivo, true))) {
                 writer.write(jugador.toString());
                 writer.newLine();
             }
             return true;
         } catch (IOException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "¡Atención! No se encontró el archivo. Jugá una para generarlo", "Advertencia", JOptionPane.WARNING_MESSAGE);
             return false;
         }
     }
 
-    private void cargarDatos() {
+    public void cargarDatos() throws FileNotFoundException {
         try {
             String rutaArchivo = System.getProperty("user.dir") + "/src/main/java/Model/datos.txt";
             try (BufferedReader reader = new BufferedReader(new FileReader(rutaArchivo))) {
@@ -50,7 +55,7 @@ public class JugadorModel {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new FileNotFoundException();
         }
     }
 
@@ -65,5 +70,22 @@ public class JugadorModel {
             default ->
                 0;
         };
+    }
+
+    public void fillTabla(DefaultTableModel tabla) {
+        if (!jugadores.isEmpty()) {
+            for (Jugador jugador : jugadores) {
+                Object[] rowData = {jugador.getNombre(), jugador.getPartida(), jugador.getPuntos()};
+                tabla.addRow(rowData);
+            }
+        }
+    }
+
+    public ArrayList<Jugador> getJugadoresOrdenados() {
+        Collections.sort(jugadores, (jugador1, jugador2)
+                -> Integer.compare(jugador2.getPuntos(), jugador1.getPuntos())
+        );
+
+        return jugadores;
     }
 }

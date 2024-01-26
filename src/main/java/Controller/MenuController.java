@@ -1,7 +1,9 @@
 package Controller;
 
 import Model.Model;
+import Model.PuntajesModel;
 import View.MenuView;
+import View.PuntajesView;
 import View.View;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -32,14 +34,17 @@ public class MenuController implements ActionListener {
         Object source = e.getSource();
 
         if (source == vista.getCheckFacil() || source == vista.getCheckIntermedio() || source == vista.getCheckDificil()) {
-            if(!checkDificultades(source)){
+            if (!checkDificultades(source)) {
                 difSelect = ((JCheckBox) source).getText();
             }
         } else if (source == vista.getStartGame()) {
             checkDificultades(source);
             iniciarJuego();
         } else if (source == vista.getPuntajes()) {
-            System.out.println("Puntajes xdxd");
+            PuntajesView view = new PuntajesView();
+            PuntajesModel model = new PuntajesModel();
+            PuntajesController controller = new PuntajesController(view, model);
+
         }
     }
 

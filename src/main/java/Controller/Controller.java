@@ -1,17 +1,21 @@
 package Controller;
 
-import Model.JugadorModel;
+import Model.PuntajesModel;
 import Model.Model;
 import Model.TablaPista;
 import View.JugadorView;
 import View.View;
 import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 
-public class Controller {
+public class Controller implements ActionListener{
 
     private Model model;
     private View view;
@@ -20,6 +24,7 @@ public class Controller {
         this.model = m1;
         this.view = v1;
         this.model.setController(this);
+        view.getAbandonar().addActionListener(this);
         loadTablero();
         loadTablas();
         v1.setVisible(true);
@@ -45,6 +50,10 @@ public class Controller {
     public void actualizarTiempo(int segundos) {
         view.getTiempo().setText(String.valueOf(segundos));
         if (!"Facil".equals(Model.getDificultad())) {
+            if (segundos == 0) {
+                JOptionPane.showMessageDialog(null, "¡Se acabó el tiempo!", "Fin del juego", JOptionPane.WARNING_MESSAGE);
+                this.view.setVisible(false);
+            }
             actualizarPuntos(model.checkPuntaje(view.getTablero()));
         }
 
@@ -56,7 +65,6 @@ public class Controller {
         for (Component component : components) {
             if (component instanceof JTextField textField) {
 
-                // Agregar DocumentListener para escuchar cambios en el texto
                 textField.getDocument().addDocumentListener(new DocumentListener() {
                     @Override
                     public void insertUpdate(DocumentEvent e) {
@@ -88,8 +96,17 @@ public class Controller {
     public void winnerStart() {
         int segundos = Integer.parseInt(this.view.getTiempo().getText());
         JugadorView playerView = new JugadorView();
-        JugadorModel playerModel = new JugadorModel();
+        PuntajesModel playerModel = new PuntajesModel();
         JugadorController controlador = new JugadorController(playerView, playerModel, segundos);
+        this.view.setVisible(false);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        JButton clickedButton = (JButton) e.getSource();
+        if(clickedButton == view.getAbandonar()){
+            view.setVisible(false);
+        }
     }
 
 }

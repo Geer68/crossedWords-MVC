@@ -110,6 +110,7 @@ public class MenuView extends javax.swing.JFrame {
         puntajes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         puntajes.setForeground(new java.awt.Color(255, 255, 255));
         puntajes.setText("Ver puntajes");
+        puntajes.setBorder(null);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -131,7 +132,7 @@ public class MenuView extends javax.swing.JFrame {
                         .addComponent(startGame, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(175, 175, 175))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(puntajes)
+                        .addComponent(puntajes, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(198, 198, 198))))
         );
         layout.setVerticalGroup(
@@ -148,8 +149,8 @@ public class MenuView extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(startGame, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(puntajes)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addComponent(puntajes, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         pack();

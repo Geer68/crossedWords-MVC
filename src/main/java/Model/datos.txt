@@ -1,4 +1,8 @@
-
 ger,182,Facil
 german,360,Intermedio
 germanchito,298,Dificil
+FRAN,182,Facil
+sapo,182,Facil
+ger,182,Facil
+SAPORTOIDE,182,Facil
+CHANCHO,191,Dificil

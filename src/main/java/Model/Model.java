@@ -39,7 +39,7 @@ public class Model implements CronometroListener {
     public void cargarCronometros() {
         if (!"Facil".equals(dificultad)) {
             if ("Dificil".equals(dificultad)) {
-                cronometro = new Cronometro(60);
+                cronometro = new Cronometro(5);
             } else if ("Intermedio".equals(dificultad)) {
                 cronometro = new Cronometro(120);
             } else {
@@ -64,7 +64,7 @@ public class Model implements CronometroListener {
     }
 
     private void checkWinner(int puntos) {
-        this.winner = puntos == 2;
+        this.winner = puntos == 182;
     }
 
     @Override
