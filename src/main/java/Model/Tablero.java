@@ -75,6 +75,17 @@ public class Tablero {
             }
         }
     }
+    
+    public void llenarTrampa(JPanel tablero) {
+        Component[] components = tablero.getComponents();
+        int contador = 0;
+        for (Component component : components) {
+            if (component instanceof JTextField textField) {
+                textField.setText(tableroUnidimensional[contador]);
+                contador++;
+            }
+        }
+    }
 
     public int checkBoxesPoint(JPanel tablero) {
         Component[] components = tablero.getComponents();

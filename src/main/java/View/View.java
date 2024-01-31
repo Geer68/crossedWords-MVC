@@ -52,6 +52,12 @@ public class View extends javax.swing.JFrame {
         return Abandonar;
     }
 
+    public JButton getGanar() {
+        return ganar;
+    }
+
+    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -477,6 +483,7 @@ public class View extends javax.swing.JFrame {
         labelTiempo = new javax.swing.JLabel();
         tiempo = new javax.swing.JLabel();
         Abandonar = new javax.swing.JButton();
+        ganar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -1057,7 +1064,11 @@ public class View extends javax.swing.JFrame {
                             .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
                             .addComponent(Abandonar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(panelTP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(panelTP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(ganar, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(130, 130, 130)))))
                 .addGap(18, 18, 18)
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
@@ -1073,7 +1084,9 @@ public class View extends javax.swing.JFrame {
                                 .addGap(20, 20, 20)
                                 .addComponent(icon))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(Abandonar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(Abandonar, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                                    .addComponent(ganar))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(panelTP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1125,6 +1138,7 @@ public class View extends javax.swing.JFrame {
     private javax.swing.JButton Abandonar;
     private javax.swing.JTable TablaHorizontal;
     private javax.swing.JTable TablaVertical;
+    private javax.swing.JButton ganar;
     private javax.swing.JLabel icon;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

@@ -21,7 +21,6 @@ public class MenuController implements ActionListener {
         this.model = model;
         vista.setVisible(true);
         vista.setTitle("Menú");
-
         vista.getCheckFacil().addActionListener(this);
         vista.getCheckIntermedio().addActionListener(this);
         vista.getCheckDificil().addActionListener(this);

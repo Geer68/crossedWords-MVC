@@ -1,8 +1,8 @@
-ger,182,Facil
-german,360,Intermedio
-germanchito,298,Dificil
-FRAN,182,Facil
-sapo,182,Facil
-ger,182,Facil
-SAPORTOIDE,182,Facil
-CHANCHO,191,Dificil
+Claudio,182,Facil
+Ana,280,Intermedio
+Juanito,398,Dificil
+Carla,182,Facil
+Andres,182,Facil
+Mariana,182,Facil
+Gabriela,182,Facil
+Roberto,210,Dificil

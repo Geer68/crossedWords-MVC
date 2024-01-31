@@ -6,7 +6,7 @@ import javax.swing.JTextField;
 
 public class Model implements CronometroListener {
 
-    private Tablero tableroHanddler;
+    private final Tablero tableroHanddler;
     private Controller controller;
     static private String dificultad;
     private boolean winner = false;
@@ -39,7 +39,7 @@ public class Model implements CronometroListener {
     public void cargarCronometros() {
         if (!"Facil".equals(dificultad)) {
             if ("Dificil".equals(dificultad)) {
-                cronometro = new Cronometro(5);
+                cronometro = new Cronometro(60);
             } else if ("Intermedio".equals(dificultad)) {
                 cronometro = new Cronometro(120);
             } else {
@@ -64,9 +64,13 @@ public class Model implements CronometroListener {
     }
 
     private void checkWinner(int puntos) {
-        this.winner = puntos == 182;
+        this.winner = puntos == 179;
     }
 
+    public void hacerTrampa(JPanel tablero){
+        tableroHanddler.llenarTrampa(tablero);
+        checkPuntaje(tablero);
+    }
     @Override
     public void actualizarSegundosRestantes(int segundos) {
         if (controller != null) {

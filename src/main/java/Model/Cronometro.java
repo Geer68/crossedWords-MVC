@@ -9,7 +9,7 @@ import java.util.List;
 public class Cronometro {
 
     private int segundosRestantes;
-    private List<CronometroListener> listeners;
+    private final List<CronometroListener> listeners;
     private Timer timer;
 
     public Cronometro(int segundos) {

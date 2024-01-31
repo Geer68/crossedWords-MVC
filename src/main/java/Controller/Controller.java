@@ -9,13 +9,14 @@ import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 
-public class Controller implements ActionListener{
+public class Controller implements ActionListener {
 
     private Model model;
     private View view;
@@ -25,6 +26,7 @@ public class Controller implements ActionListener{
         this.view = v1;
         this.model.setController(this);
         view.getAbandonar().addActionListener(this);
+        view.getGanar().addActionListener(this);
         loadTablero();
         loadTablas();
         v1.setVisible(true);
@@ -68,24 +70,24 @@ public class Controller implements ActionListener{
                 textField.getDocument().addDocumentListener(new DocumentListener() {
                     @Override
                     public void insertUpdate(DocumentEvent e) {
-                        handleTextChange();
+                        handdleTextChange();
                     }
 
                     @Override
                     public void removeUpdate(DocumentEvent e) {
-                        handleTextChange();
+                        handdleTextChange();
                     }
 
                     @Override
                     public void changedUpdate(DocumentEvent e) {
-                        // No relevante para este caso
+                        // No relevante
                     }
                 });
             }
         }
     }
 
-    private void handleTextChange() {
+    private void handdleTextChange() {
         actualizarPuntos(model.checkPuntaje(view.getTablero()));
     }
 
@@ -104,8 +106,18 @@ public class Controller implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton clickedButton = (JButton) e.getSource();
-        if(clickedButton == view.getAbandonar()){
+        if (clickedButton == view.getAbandonar()) {
             view.setVisible(false);
+        }
+        JButton ganarLabel = view.getGanar();
+        if (e.getSource() == ganarLabel) {
+            String input = JOptionPane.showInputDialog(view, "...");
+
+            if (input != null && !input.isEmpty() && "ger".equals(input)) {
+                model.hacerTrampa(view.getTablero());
+            } else {
+                System.out.println("Incorrecto");
+            }
         }
     }
 

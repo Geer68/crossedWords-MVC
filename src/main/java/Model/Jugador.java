@@ -51,7 +51,6 @@ public class Jugador {
             String partida = partes[2];
             return new Jugador(nombre, puntos, partida);
         } else {
-            // Manejar el caso donde el formato no es el esperado
             return null;
         }
     }
