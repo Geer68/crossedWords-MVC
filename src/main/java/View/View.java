@@ -492,7 +492,7 @@ public class View extends javax.swing.JFrame {
         setResizable(false);
 
         title.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        title.setText("Cross Words ;)");
+        title.setText("Crossed Words ;)");
 
         icon.setIcon(new javax.swing.ImageIcon("C:\\Users\\germh\\Documents\\NetBeansProjects\\HidalgoCrossWords\\src\\main\\resources\\images\\crossword64x64.png")); // NOI18N
 
@@ -937,7 +937,7 @@ public class View extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -987,7 +987,7 @@ public class View extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 531, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -1003,13 +1003,13 @@ public class View extends javax.swing.JFrame {
         panelTP.setBackground(new java.awt.Color(255, 255, 255));
 
         labelPuntos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        labelPuntos.setText("Puntos:");
+        labelPuntos.setText("Aciertos");
 
         puntos.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         puntos.setText("0");
 
         labelTiempo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        labelTiempo.setText("Tiempo restante:");
+        labelTiempo.setText("Tiempo restante");
 
         tiempo.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         tiempo.setText("0");
@@ -1020,12 +1020,12 @@ public class View extends javax.swing.JFrame {
             panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTPLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelPuntos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labelPuntos, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(puntos)
                 .addGap(18, 18, 18)
                 .addComponent(labelTiempo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tiempo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1033,13 +1033,11 @@ public class View extends javax.swing.JFrame {
             panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTPLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addGroup(panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(labelTiempo)
-                        .addComponent(tiempo))
-                    .addGroup(panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(labelPuntos)
-                        .addComponent(puntos)))
+                .addGroup(panelTPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelPuntos)
+                    .addComponent(puntos)
+                    .addComponent(labelTiempo)
+                    .addComponent(tiempo))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -1055,21 +1053,25 @@ public class View extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tablero, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(icon)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
+                            .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(Abandonar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(panelTP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 165, Short.MAX_VALUE)
                                 .addComponent(ganar, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(130, 130, 130)))))
-                .addGap(18, 18, 18)
+                                .addGap(148, 148, 148))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(panelTP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(tablero, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, Short.MAX_VALUE)))
                 .addComponent(jTabbedPane1)
                 .addContainerGap())
         );

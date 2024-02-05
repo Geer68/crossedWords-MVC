@@ -20,6 +20,7 @@ public class JugadorController implements ActionListener {
         this.view.setVisible(true);
         this.view.setTitle("Felicidades");
         this.view.getSaveGame().addActionListener(this);
+        this.view.getCancelar().addActionListener(this);
     }
 
     @Override
@@ -33,6 +34,12 @@ public class JugadorController implements ActionListener {
             }
             JOptionPane.showMessageDialog(null, "Datos guardados con éxito", "Éxito", JOptionPane.INFORMATION_MESSAGE);
             this.view.setVisible(false);
+        }
+        if (source == view.getCancelar()) {
+            int respuesta = JOptionPane.showConfirmDialog(view, "¿Está seguro de que desea cancelar?", "Progreso", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            if (respuesta == JOptionPane.YES_OPTION) {
+                this.view.setVisible(false);
+            }
         }
     }
 }

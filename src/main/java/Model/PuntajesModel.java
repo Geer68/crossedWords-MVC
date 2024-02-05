@@ -6,14 +6,14 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Stack;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class PuntajesModel {
 
-    final private ArrayList<Jugador> jugadores = new ArrayList();
+    final private Stack<Jugador> jugadores = new Stack();
     private Jugador jugador;
 
     public PuntajesModel(String nombre, int puntos, String dificultad) {
@@ -81,7 +81,7 @@ public class PuntajesModel {
         }
     }
 
-    public ArrayList<Jugador> getJugadoresOrdenados() {
+    public Stack<Jugador> getJugadoresOrdenados() {
         Collections.sort(jugadores, (jugador1, jugador2)
                 -> Integer.compare(jugador2.getPuntos(), jugador1.getPuntos())
         );

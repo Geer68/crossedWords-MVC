@@ -9,7 +9,6 @@ import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
@@ -31,7 +30,7 @@ public class Controller implements ActionListener {
         loadTablas();
         v1.setVisible(true);
         m1.cargarCronometros();
-        v1.setTitle("Cross Words");
+        v1.setTitle("Crossed Words");
         addFacilListeners();
     }
 
@@ -47,6 +46,10 @@ public class Controller implements ActionListener {
 
     private void loadTablero() {
         model.loadTablero(view.getTablero());
+        if("Facil".equals(Model.getDificultad())){
+            view.getLabelTiempo().setVisible(false);
+            view.getTiempo().setVisible(false);
+        }
     }
 
     public void actualizarTiempo(int segundos) {

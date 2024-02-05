@@ -40,17 +40,17 @@
                       <Component id="icon" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="title" max="32767" attributes="0"/>
+                          <Component id="title" pref="283" max="32767" attributes="0"/>
                           <Component id="Abandonar" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace type="unrelated" pref="165" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" pref="166" max="32767" attributes="0"/>
                               <Component id="ganar" min="-2" pref="14" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="panelTP" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -104,7 +104,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="36" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Crossed Words ;)"/>
+        <Property name="text" type="java.lang.String" value="Cross Words ;)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="icon">
@@ -951,7 +951,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="531" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="533" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1015,7 +1015,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" pref="531" max="32767" attributes="0"/>
+                      <Component id="jScrollPane2" pref="533" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>

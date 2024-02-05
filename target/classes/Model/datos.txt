@@ -6,5 +6,3 @@ Andres,182,Facil
 Mariana,182,Facil
 Gabriela,182,Facil
 Roberto,210,Dificil
-Franco,344,Intermedio
-LUIS,356,Dificil
