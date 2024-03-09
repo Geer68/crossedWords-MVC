@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Stack;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 public class PuntajesModel {
 
@@ -72,14 +71,7 @@ public class PuntajesModel {
         };
     }
 
-    public void fillTabla(DefaultTableModel tabla) {
-        if (!jugadores.isEmpty()) {
-            for (Jugador jugador : jugadores) {
-                Object[] rowData = {jugador.getNombre(), jugador.getPartida(), jugador.getPuntos()};
-                tabla.addRow(rowData);
-            }
-        }
-    }
+    
 
     public Stack<Jugador> getJugadoresOrdenados() {
         Collections.sort(jugadores, (jugador1, jugador2)

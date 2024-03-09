@@ -1,4 +1,4 @@
-package Model;
+package Controller;
 
 import javax.swing.Timer;
 import java.awt.event.ActionEvent;

@@ -3,13 +3,13 @@ C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Contro
 C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Model\Jugador.java
 C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\View\View.java
 C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Model\PuntajesModel.java
-C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Model\TablaPista.java
 C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Controller\PuntajesController.java
-C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Model\Cronometro.java
 C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\View\PuntajesView.java
-C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Model\Tablero.java
+C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Controller\TablaPista.java
+C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Controller\Cronometro.java
 C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\View\JugadorView.java
-C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Model\CronometroListener.java
+C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Controller\CronometroListener.java
+C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Controller\Tablero.java
 C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Model\Model.java
 C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Controller\JugadorController.java
 C:\Users\germh\Documents\NetBeansProjects\HidalgoCrossWords\src\main\java\Controller\MenuController.java

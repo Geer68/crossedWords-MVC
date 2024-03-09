@@ -8,3 +8,4 @@ Gabriela,182,Facil
 Roberto,210,Dificil
 Franco,344,Intermedio
 LUIS,356,Dificil
+prueba,182,Facil

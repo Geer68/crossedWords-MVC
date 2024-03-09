@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Jugador;
 import Model.PuntajesModel;
 import javax.swing.table.DefaultTableModel;
 import View.PuntajesView;
@@ -31,12 +32,21 @@ public class PuntajesController implements ActionListener {
             }
             view.setLocationRelativeTo(null);
             view.setVisible(true);
-            this.model.fillTabla((DefaultTableModel) view.getTablaPuntajes().getModel());
+            
+            fillTabla((DefaultTableModel) view.getTablaPuntajes().getModel());
         } catch (FileNotFoundException ex) {
             JOptionPane.showMessageDialog(null, "¡Atención! No se encontró el archivo. Jugá para generarlo", "Advertencia", JOptionPane.WARNING_MESSAGE);
         }
     }
 
+    public void fillTabla(DefaultTableModel tabla) {
+        if (!model.getJugadoresOrdenados().isEmpty()) {
+            for (Jugador jugador : model.getJugadoresOrdenados()) {
+                Object[] rowData = {jugador.getNombre(), jugador.getPartida(), jugador.getPuntos()};
+                tabla.addRow(rowData);
+            }
+        }
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton clickedButton = (JButton) e.getSource();

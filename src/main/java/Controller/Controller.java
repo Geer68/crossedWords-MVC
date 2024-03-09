@@ -2,7 +2,6 @@ package Controller;
 
 import Model.PuntajesModel;
 import Model.Model;
-import Model.TablaPista;
 import View.JugadorView;
 import View.View;
 import java.awt.Component;
@@ -10,26 +9,30 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 
-public class Controller implements ActionListener {
+public class Controller implements ActionListener, CronometroListener {
 
     private Model model;
     private View view;
+    private Cronometro cronometro;    
+    private final Tablero tableroHanddler;
+    private boolean winner = false;
 
     public Controller(View v1, Model m1) {
         this.model = m1;
         this.view = v1;
-        this.model.setController(this);
+        this.tableroHanddler = new Tablero();
         view.getAbandonar().addActionListener(this);
         view.getGanar().addActionListener(this);
         loadTablero();
         loadTablas();
         v1.setVisible(true);
-        m1.cargarCronometros();
+        cargarCronometros();
         v1.setTitle("Crossed Words");
         addFacilListeners();
     }
@@ -45,7 +48,7 @@ public class Controller implements ActionListener {
     }
 
     private void loadTablero() {
-        model.loadTablero(view.getTablero());
+        loadTablero(view.getTablero());
         if("Facil".equals(Model.getDificultad())){
             view.getLabelTiempo().setVisible(false);
             view.getTiempo().setVisible(false);
@@ -59,7 +62,7 @@ public class Controller implements ActionListener {
                 JOptionPane.showMessageDialog(null, "¡Se acabó el tiempo!", "Fin del juego", JOptionPane.WARNING_MESSAGE);
                 this.view.setVisible(false);
             }
-            actualizarPuntos(model.checkPuntaje(view.getTablero()));
+            actualizarPuntos(checkPuntaje(view.getTablero()));
         }
 
     }
@@ -91,7 +94,7 @@ public class Controller implements ActionListener {
     }
 
     private void handdleTextChange() {
-        actualizarPuntos(model.checkPuntaje(view.getTablero()));
+        actualizarPuntos(checkPuntaje(view.getTablero()));
     }
 
     public void actualizarPuntos(int puntos) {
@@ -117,11 +120,59 @@ public class Controller implements ActionListener {
             String input = JOptionPane.showInputDialog(view, "...");
 
             if (input != null && !input.isEmpty() && "ger".equals(input)) {
-                model.hacerTrampa(view.getTablero());
+                hacerTrampa(view.getTablero());
             } else {
                 System.out.println("Incorrecto");
             }
         }
     }
 
+    @Override
+    public void actualizarSegundosRestantes(int segundos) {
+        actualizarTiempo(segundos); 
+    }
+    
+    public void cargarCronometros() {
+        
+        if (!"Facil".equals(Model.getDificultad())) {
+            if ("Dificil".equals(Model.getDificultad())) {
+                cronometro = new Cronometro(60);
+            } else if ("Intermedio".equals(Model.getDificultad())) {
+                cronometro = new Cronometro(120);
+            } else {
+                cronometro = new Cronometro(60);
+            }
+            cronometro.agregarListener(this);
+            cronometro.startTimer();
+        }
+    }
+    
+    public int checkPuntaje(JPanel tablero) {
+        int puntos = tableroHanddler.checkBoxesPoint(tablero);
+        checkWinner(puntos);
+        if (!winner) {
+            return puntos;
+        }
+        if (!"Facil".equals(Model.getDificultad())) {
+            cronometro.stopTimer();
+        }
+        winnerStart();
+        return puntos;
+    }
+
+    private void checkWinner(int puntos) {
+        this.winner = puntos == 179;
+    }
+     public void hacerTrampa(JPanel tablero){
+        tableroHanddler.llenarTrampa(tablero);
+        checkPuntaje(tablero);
+    }
+     
+     public void loadTablero(JPanel tablero) {
+        tableroHanddler.configTablero(tablero);
+    }
+
+    public JTextField[][] getTableroValues() {
+        return tableroHanddler.getTextFields();
+    }
 }
