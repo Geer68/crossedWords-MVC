@@ -4,7 +4,6 @@ Este proyecto implementa un juego de palabras cruzadas con palabras clave y pist
 
 ## Ejecución
 
+Compila el proyecto utilizando tu entorno de desarrollo de tu preferencia
 > [!WARNING]
 > Este proyecto fue desarrollado con Java 21.0.1
-
-Compila el proyecto utilizando tu entorno de desarrollo de tu preferencia
