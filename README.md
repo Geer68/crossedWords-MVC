@@ -5,9 +5,10 @@ Este proyecto implementa un juego de palabras cruzadas con palabras clave y pist
 ## Características  
 * Swing
 * Excepciones
+* Patrón MVC
 * Persistencia de puntajes
 > La aplicación permite guardar puntajes en archivos .txt
-* Patrón MVC
+
 
 ## Ejecución
 
